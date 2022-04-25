@@ -1,0 +1,26 @@
+# =================================
+# = Server
+# =================================
+server:
+  port: 8080
+  servlet:
+    context-path: /v1   #  controle de versao
+
+# =================================
+# = Spring
+# =================================
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bluemeet?createDatabaseIfNotExist=true&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource # gerenciar conexoes em aberto
+
+# =================================
+# = Logging - INFO - TRACE - DEBUG - ERRO
+# =================================
+logging:
+  level:
+    org.springframework: ERROR
+    org.flywaydb: ERROR
