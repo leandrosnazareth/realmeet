@@ -1,5 +1,6 @@
 version: 0.2
 
+#  instalação dos softwares necessários para o projeto rodar
 phases:
   install:
     runtime-versions:
@@ -8,13 +9,15 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean package
+      - mvn clean package  #comandos para gerar o jar
 
 artifacts:
+  #local do jar
   files:
     - service/target/*.jar
   discard-paths: yes
 
+  #cahce para subir para o s3 as dependencias do maven para não ficar baixando toda vez que vc faz um build
 cache:
   paths:
     - '/root/.m2/**/*'
