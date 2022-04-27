@@ -148,27 +148,27 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
-            <!--checador de formatacao, quebra de linha espacamento de codigo fonte-->
-            <!--            <plugin>-->
-            <!--                <groupId>com.hubspot.maven.plugins</groupId>-->
-            <!--                <artifactId>prettier-maven-plugin</artifactId>-->
-            <!--                <version>${prettier-maven-plugin.version}</version>-->
-            <!--                <configuration>-->
-            <!--                    <printWidth>120</printWidth>-->
-            <!--                    <tabWidth>4</tabWidth>-->
-            <!--                    <prettierJavaVersion>0.7.1</prettierJavaVersion>-->
-            <!--                    <generateDiff>true</generateDiff>-->
-            <!--                    <fail>true</fail>-->
-            <!--                </configuration>-->
-            <!--                <executions>-->
-            <!--                    <execution>-->
-            <!--                        <phase>compile</phase>-->
-            <!--                        <goals>-->
-            <!--                            <goal>check</goal>-->
-            <!--                        </goals>-->
-            <!--                    </execution>-->
-            <!--                </executions>-->
-            <!--            </plugin>-->
+            <!--            checador de formatacao, quebra de linha espacamento de codigo fonte-->
+            <plugin>
+                <groupId>com.hubspot.maven.plugins</groupId>
+                <artifactId>prettier-maven-plugin</artifactId>
+                <version>${prettier-maven-plugin.version}</version>
+                <configuration>
+                    <printWidth>120</printWidth>
+                    <tabWidth>4</tabWidth>
+                    <prettierJavaVersion>0.7.1</prettierJavaVersion>
+                    <generateDiff>true</generateDiff>
+                    <fail>true</fail>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
             <!-- Failed to execute goal org.apache.maven.plugins:maven-resources-plugin:3.2.0:resources (default-resources) on project application-etude: Input length = 1 -->
             <plugin>
