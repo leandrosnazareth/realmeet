@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+#  instalação dos softwares necessários para o projeto rodar
+  install:
+    runtime-version:
+      java: corretto11
+      docker: 19
+  build:
+#    comandos para gerar o jar
+    commands:
+      - echo Build started on `date`
+      - mvn clean package
+
+#local do jar
+artifacts:
+  files:
+    - service/tardet/*.jar
+  discard-paths: yes
+
+#cahce para subir para o s3 as dependencias do maven para não ficar baixando toda vez que vc faz um build
+cache:
+  paths:
+    - '/root/.m2/**/*'
