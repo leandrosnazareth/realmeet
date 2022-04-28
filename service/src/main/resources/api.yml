@@ -9,7 +9,7 @@ servers:
 paths:
   /rooms:
     get:
-      summary: 'Returna rooms'
+      summary: 'Retorna rooms'
       operationId: listRooms
       tags:
         - /room
