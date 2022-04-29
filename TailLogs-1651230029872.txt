@@ -1,0 +1,425 @@
+----------------------------------------
+/var/log/eb-hooks.log
+----------------------------------------
+
+
+----------------------------------------
+/var/log/nginx/access.log
+----------------------------------------
+172.31.38.90 - - [29/Apr/2022:10:48:10 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:48:19 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:48:25 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:48:34 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:48:40 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:48:49 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:48:55 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:49:04 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:49:10 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:49:19 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:49:25 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:49:34 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:49:40 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:49:49 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:49:55 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:50:04 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:50:10 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:50:19 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:50:25 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:50:34 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:50:40 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:50:49 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:50:55 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:51:04 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:51:10 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:51:19 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:51:25 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:51:34 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:51:40 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:51:49 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:51:55 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:52:04 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:52:10 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:52:19 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:52:25 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:52:34 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:52:40 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:52:50 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:52:55 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:53:05 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:53:10 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:53:20 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:53:25 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:53:35 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:53:40 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:53:50 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:53:55 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:54:05 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:54:10 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:54:20 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:54:25 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:54:35 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:54:40 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:54:50 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:54:55 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:55:05 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:55:10 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:55:20 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:55:26 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:55:35 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:55:41 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:55:50 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:55:56 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:56:05 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:56:11 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:56:20 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:56:26 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:56:35 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:56:41 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:56:50 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:56:56 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:57:05 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:57:11 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:57:20 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:57:26 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:57:35 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:57:41 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:57:50 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:57:56 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:58:05 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:58:11 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:58:20 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:58:26 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:58:35 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:58:41 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:58:50 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:58:56 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:59:05 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:59:11 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:59:20 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:59:26 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:59:35 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:59:41 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:10:59:50 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:10:59:56 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:11:00:05 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:11:00:11 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.25 - - [29/Apr/2022:11:00:14 +0000] "GET / HTTP/1.1" 404 431 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36" "77.70.115.117"
+172.31.15.25 - - [29/Apr/2022:11:00:20 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+172.31.38.90 - - [29/Apr/2022:11:00:26 +0000] "GET / HTTP/1.1" 404 431 "-" "ELB-HealthChecker/2.0" "-"
+
+
+----------------------------------------
+/var/log/nginx/error.log
+----------------------------------------
+2022/04/28 13:32:20 [error] 11627#11627: *548 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:32:33 [error] 11627#11627: *550 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:32:35 [error] 11627#11627: *552 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:32:48 [error] 11627#11627: *554 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:32:50 [error] 11627#11627: *556 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:33:03 [error] 11627#11627: *558 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:33:05 [error] 11627#11627: *560 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:33:18 [error] 11627#11627: *562 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:33:20 [error] 11627#11627: *564 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:33:33 [error] 11627#11627: *566 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:33:35 [error] 11627#11627: *568 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:33:48 [error] 11627#11627: *570 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:33:50 [error] 11627#11627: *572 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:34:03 [error] 11627#11627: *574 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:34:05 [error] 11627#11627: *576 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:34:18 [error] 11627#11627: *578 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:34:20 [error] 11627#11627: *580 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:34:33 [error] 11627#11627: *582 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:34:35 [error] 11627#11627: *584 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:34:48 [error] 11627#11627: *586 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:34:50 [error] 11627#11627: *588 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:35:03 [error] 11627#11627: *590 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:35:05 [error] 11627#11627: *592 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:35:18 [error] 11627#11627: *594 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:35:20 [error] 11627#11627: *596 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:35:33 [error] 11627#11627: *598 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:35:35 [error] 11627#11627: *600 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:35:48 [error] 11627#11627: *602 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:35:50 [error] 11627#11627: *604 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:36:03 [error] 11627#11627: *606 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:36:05 [error] 11627#11627: *608 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:36:18 [error] 11627#11627: *610 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:36:20 [error] 11627#11627: *612 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:36:33 [error] 11627#11627: *614 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:36:35 [error] 11627#11627: *616 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:36:48 [error] 11627#11627: *618 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:36:50 [error] 11627#11627: *620 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:37:03 [error] 11627#11627: *622 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:37:05 [error] 11627#11627: *624 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:37:18 [error] 11627#11627: *626 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:37:20 [error] 11627#11627: *628 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:37:33 [error] 11627#11627: *630 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:37:35 [error] 11627#11627: *632 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:37:48 [error] 11627#11627: *634 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:37:50 [error] 11627#11627: *636 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:38:03 [error] 11627#11627: *638 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:38:05 [error] 11627#11627: *640 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:38:18 [error] 11627#11627: *642 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:38:20 [error] 11627#11627: *644 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:38:33 [error] 11627#11627: *646 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:38:35 [error] 11627#11627: *648 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:38:48 [error] 11627#11627: *650 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:38:50 [error] 11627#11627: *652 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:39:03 [error] 11627#11627: *654 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:39:05 [error] 11627#11627: *656 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:39:18 [error] 11627#11627: *658 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:39:20 [error] 11627#11627: *660 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:39:33 [error] 11627#11627: *662 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:39:35 [error] 11627#11627: *664 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:39:48 [error] 11627#11627: *666 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:39:50 [error] 11627#11627: *668 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:40:03 [error] 11627#11627: *670 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:40:05 [error] 11627#11627: *672 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:40:18 [error] 11627#11627: *674 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:40:20 [error] 11627#11627: *676 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:40:33 [error] 11627#11627: *678 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:40:35 [error] 11627#11627: *680 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:40:48 [error] 11627#11627: *682 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:40:50 [error] 11627#11627: *684 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:41:03 [error] 11627#11627: *686 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:41:05 [error] 11627#11627: *688 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:41:34 [error] 27713#27713: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:41:35 [error] 27713#27713: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:41:49 [error] 27713#27713: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:41:50 [error] 27713#27713: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:42:04 [error] 27713#27713: *9 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:42:05 [error] 27713#27713: *11 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:42:19 [error] 27713#27713: *13 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:42:20 [error] 27713#27713: *15 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:42:34 [error] 27713#27713: *17 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:42:35 [error] 27713#27713: *19 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:42:49 [error] 27713#27713: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:42:50 [error] 27713#27713: *23 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:43:04 [error] 27713#27713: *25 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:43:05 [error] 27713#27713: *27 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:43:19 [error] 27713#27713: *29 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:43:20 [error] 27713#27713: *31 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:43:34 [error] 27713#27713: *33 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:43:35 [error] 27713#27713: *35 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:43:49 [error] 27713#27713: *37 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:43:50 [error] 27713#27713: *39 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:44:04 [error] 27713#27713: *41 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:44:05 [error] 27713#27713: *43 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:44:19 [error] 27713#27713: *45 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 13:44:20 [error] 27713#27713: *47 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 17:45:33 [error] 31838#31838: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 19:16:36 [error] 17464#17464: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 19:16:38 [error] 17464#17464: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 19:30:52 [error] 25597#25597: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.38.90, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+2022/04/28 19:30:54 [error] 25597#25597: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.15.25, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "172.31.34.98"
+
+
+----------------------------------------
+/var/log/web.stdout.log
+----------------------------------------
+Apr 28 13:42:14 ip-172-31-34-98 web: 13:42:14 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.springframework.boot.StartupInfoLogger#033[0;39m: Starting Application v0.0.1-SNAPSHOT using Java 11.0.14.1 on ip-172-31-34-98.sa-east-1.compute.internal with PID 27662 (/var/app/current/realmeet-service-0.0.1-SNAPSHOT.jar started by webapp in /var/app/current)
+Apr 28 13:42:14 ip-172-31-34-98 web: 13:42:14 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.springframework.boot.SpringApplication#033[0;39m: The following 1 profile is active: "live"
+Apr 28 13:43:02 ip-172-31-34-98 web: 13:43:02 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Initializing ProtocolHandler ["http-nio-5000"]
+Apr 28 13:43:02 ip-172-31-34-98 web: 13:43:02 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Starting service [Tomcat]
+Apr 28 13:43:02 ip-172-31-34-98 web: 13:43:02 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Starting Servlet engine: [Apache Tomcat/9.0.62]
+Apr 28 13:43:05 ip-172-31-34-98 web: 13:43:05 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Initializing Spring embedded WebApplicationContext
+Apr 28 13:43:23 ip-172-31-34-98 web: 13:43:23 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33mcom.zaxxer.hikari.HikariDataSource#033[0;39m: HikariPool-1 - Starting...
+Apr 28 13:43:31 ip-172-31-34-98 web: 13:43:31 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33mcom.zaxxer.hikari.HikariDataSource#033[0;39m: HikariPool-1 - Start completed.
+Apr 28 13:43:40 ip-172-31-34-98 web: 13:43:40 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.jpa.internal.util.LogHelper#033[0;39m: HHH000204: Processing PersistenceUnitInfo [name: default]
+Apr 28 13:43:41 ip-172-31-34-98 web: 13:43:41 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.Version#033[0;39m: HHH000412: Hibernate ORM core version 5.6.8.Final
+Apr 28 13:43:46 ip-172-31-34-98 web: 13:43:46 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.annotations.common.reflection.java.JavaReflectionManager#033[0;39m: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+Apr 28 13:43:51 ip-172-31-34-98 web: 13:43:51 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.dialect.Dialect#033[0;39m: HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+Apr 28 13:43:55 ip-172-31-34-98 web: 13:43:55 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator#033[0;39m: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Apr 28 13:44:33 ip-172-31-34-98 web: 13:44:33 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Starting ProtocolHandler ["http-nio-5000"]
+Apr 28 13:44:34 ip-172-31-34-98 web: 13:44:34 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.springframework.boot.StartupInfoLogger#033[0;39m: Started Application in 165.34 seconds (JVM running for 186.494)
+Apr 28 17:45:31 ip-172-31-34-98 web: 17:45:31 #033[34mINFO #033[0;39m [#033[34mSpringApplicationShutdownHook#033[0;39m] #033[33mcom.zaxxer.hikari.HikariDataSource#033[0;39m: HikariPool-1 - Shutdown initiated...
+Apr 28 17:45:31 ip-172-31-34-98 web: 17:45:31 #033[34mINFO #033[0;39m [#033[34mSpringApplicationShutdownHook#033[0;39m] #033[33mcom.zaxxer.hikari.HikariDataSource#033[0;39m: HikariPool-1 - Shutdown completed.
+Apr 28 17:45:36 ip-172-31-34-98 web: .   ____          _            __ _ _
+Apr 28 17:45:36 ip-172-31-34-98 web: /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+Apr 28 17:45:36 ip-172-31-34-98 web: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+Apr 28 17:45:36 ip-172-31-34-98 web: \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+Apr 28 17:45:36 ip-172-31-34-98 web: '  |____| .__|_| |_|_| |_\__, | / / / /
+Apr 28 17:45:36 ip-172-31-34-98 web: =========|_|==============|___/=/_/_/_/
+Apr 28 17:45:36 ip-172-31-34-98 web: :: Spring Boot ::                (v2.6.7)
+Apr 28 17:45:36 ip-172-31-34-98 web: 17:45:36 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.springframework.boot.StartupInfoLogger#033[0;39m: Starting Application v0.0.1-SNAPSHOT using Java 11.0.14.1 on ip-172-31-34-98.sa-east-1.compute.internal with PID 31783 (/var/app/current/realmeet-service-0.0.1-SNAPSHOT.jar started by webapp in /var/app/current)
+Apr 28 17:45:36 ip-172-31-34-98 web: 17:45:36 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.springframework.boot.SpringApplication#033[0;39m: The following 1 profile is active: "live"
+Apr 28 17:45:40 ip-172-31-34-98 web: 17:45:40 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Initializing ProtocolHandler ["http-nio-5000"]
+Apr 28 17:45:40 ip-172-31-34-98 web: 17:45:40 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Starting service [Tomcat]
+Apr 28 17:45:40 ip-172-31-34-98 web: 17:45:40 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Starting Servlet engine: [Apache Tomcat/9.0.62]
+Apr 28 17:45:40 ip-172-31-34-98 web: 17:45:40 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Initializing Spring embedded WebApplicationContext
+Apr 28 17:45:41 ip-172-31-34-98 web: 17:45:41 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33mcom.zaxxer.hikari.HikariDataSource#033[0;39m: HikariPool-1 - Starting...
+Apr 28 17:45:41 ip-172-31-34-98 web: 17:45:41 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33mcom.zaxxer.hikari.HikariDataSource#033[0;39m: HikariPool-1 - Start completed.
+Apr 28 17:45:42 ip-172-31-34-98 web: 17:45:42 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.jpa.internal.util.LogHelper#033[0;39m: HHH000204: Processing PersistenceUnitInfo [name: default]
+Apr 28 17:45:42 ip-172-31-34-98 web: 17:45:42 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.Version#033[0;39m: HHH000412: Hibernate ORM core version 5.6.8.Final
+Apr 28 17:45:42 ip-172-31-34-98 web: 17:45:42 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.annotations.common.reflection.java.JavaReflectionManager#033[0;39m: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+Apr 28 17:45:43 ip-172-31-34-98 web: 17:45:43 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.dialect.Dialect#033[0;39m: HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+Apr 28 17:45:43 ip-172-31-34-98 web: 17:45:43 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator#033[0;39m: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Apr 28 17:45:46 ip-172-31-34-98 web: 17:45:46 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Starting ProtocolHandler ["http-nio-5000"]
+Apr 28 17:45:46 ip-172-31-34-98 web: 17:45:46 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.springframework.boot.StartupInfoLogger#033[0;39m: Started Application in 12.289 seconds (JVM running for 14.246)
+Apr 28 19:16:35 ip-172-31-34-98 web: 19:16:35 #033[34mINFO #033[0;39m [#033[34mSpringApplicationShutdownHook#033[0;39m] #033[33mcom.zaxxer.hikari.HikariDataSource#033[0;39m: HikariPool-1 - Shutdown initiated...
+Apr 28 19:16:35 ip-172-31-34-98 web: 19:16:35 #033[34mINFO #033[0;39m [#033[34mSpringApplicationShutdownHook#033[0;39m] #033[33mcom.zaxxer.hikari.HikariDataSource#033[0;39m: HikariPool-1 - Shutdown completed.
+Apr 28 19:16:39 ip-172-31-34-98 web: .   ____          _            __ _ _
+Apr 28 19:16:39 ip-172-31-34-98 web: /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+Apr 28 19:16:39 ip-172-31-34-98 web: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+Apr 28 19:16:39 ip-172-31-34-98 web: \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+Apr 28 19:16:39 ip-172-31-34-98 web: '  |____| .__|_| |_|_| |_\__, | / / / /
+Apr 28 19:16:39 ip-172-31-34-98 web: =========|_|==============|___/=/_/_/_/
+Apr 28 19:16:39 ip-172-31-34-98 web: :: Spring Boot ::                (v2.6.7)
+Apr 28 19:16:39 ip-172-31-34-98 web: 19:16:39 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.springframework.boot.StartupInfoLogger#033[0;39m: Starting Application v0.0.1-SNAPSHOT using Java 11.0.14.1 on ip-172-31-34-98.sa-east-1.compute.internal with PID 17408 (/var/app/current/realmeet-service-0.0.1-SNAPSHOT.jar started by webapp in /var/app/current)
+Apr 28 19:16:39 ip-172-31-34-98 web: 19:16:39 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.springframework.boot.SpringApplication#033[0;39m: The following 1 profile is active: "live"
+Apr 28 19:16:43 ip-172-31-34-98 web: 19:16:43 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Initializing ProtocolHandler ["http-nio-5000"]
+Apr 28 19:16:43 ip-172-31-34-98 web: 19:16:43 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Starting service [Tomcat]
+Apr 28 19:16:43 ip-172-31-34-98 web: 19:16:43 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Starting Servlet engine: [Apache Tomcat/9.0.62]
+Apr 28 19:16:43 ip-172-31-34-98 web: 19:16:43 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Initializing Spring embedded WebApplicationContext
+Apr 28 19:16:44 ip-172-31-34-98 web: 19:16:44 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33mcom.zaxxer.hikari.HikariDataSource#033[0;39m: HikariPool-1 - Starting...
+Apr 28 19:16:45 ip-172-31-34-98 web: 19:16:45 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33mcom.zaxxer.hikari.HikariDataSource#033[0;39m: HikariPool-1 - Start completed.
+Apr 28 19:16:45 ip-172-31-34-98 web: 19:16:45 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.jpa.internal.util.LogHelper#033[0;39m: HHH000204: Processing PersistenceUnitInfo [name: default]
+Apr 28 19:16:45 ip-172-31-34-98 web: 19:16:45 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.Version#033[0;39m: HHH000412: Hibernate ORM core version 5.6.8.Final
+Apr 28 19:16:46 ip-172-31-34-98 web: 19:16:46 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.annotations.common.reflection.java.JavaReflectionManager#033[0;39m: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+Apr 28 19:16:46 ip-172-31-34-98 web: 19:16:46 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.dialect.Dialect#033[0;39m: HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+Apr 28 19:16:46 ip-172-31-34-98 web: 19:16:46 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator#033[0;39m: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Apr 28 19:16:50 ip-172-31-34-98 web: 19:16:50 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Starting ProtocolHandler ["http-nio-5000"]
+Apr 28 19:16:50 ip-172-31-34-98 web: 19:16:50 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.springframework.boot.StartupInfoLogger#033[0;39m: Started Application in 12.495 seconds (JVM running for 14.429)
+Apr 28 19:30:41 ip-172-31-34-98 web: 19:30:41 #033[34mINFO #033[0;39m [#033[34mSpringApplicationShutdownHook#033[0;39m] #033[33mcom.zaxxer.hikari.HikariDataSource#033[0;39m: HikariPool-1 - Shutdown initiated...
+Apr 28 19:30:41 ip-172-31-34-98 web: 19:30:41 #033[34mINFO #033[0;39m [#033[34mSpringApplicationShutdownHook#033[0;39m] #033[33mcom.zaxxer.hikari.HikariDataSource#033[0;39m: HikariPool-1 - Shutdown completed.
+Apr 28 19:30:45 ip-172-31-34-98 web: .   ____          _            __ _ _
+Apr 28 19:30:45 ip-172-31-34-98 web: /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+Apr 28 19:30:45 ip-172-31-34-98 web: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+Apr 28 19:30:45 ip-172-31-34-98 web: \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+Apr 28 19:30:45 ip-172-31-34-98 web: '  |____| .__|_| |_|_| |_\__, | / / / /
+Apr 28 19:30:45 ip-172-31-34-98 web: =========|_|==============|___/=/_/_/_/
+Apr 28 19:30:45 ip-172-31-34-98 web: :: Spring Boot ::                (v2.6.7)
+Apr 28 19:30:45 ip-172-31-34-98 web: 19:30:45 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.springframework.boot.StartupInfoLogger#033[0;39m: Starting Application v0.0.1-SNAPSHOT using Java 11.0.14.1 on ip-172-31-34-98.sa-east-1.compute.internal with PID 25532 (/var/app/current/realmeet-service-0.0.1-SNAPSHOT.jar started by webapp in /var/app/current)
+Apr 28 19:30:45 ip-172-31-34-98 web: 19:30:45 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.springframework.boot.SpringApplication#033[0;39m: The following 1 profile is active: "live"
+Apr 28 19:30:49 ip-172-31-34-98 web: 19:30:49 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Initializing ProtocolHandler ["http-nio-5000"]
+Apr 28 19:30:49 ip-172-31-34-98 web: 19:30:49 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Starting service [Tomcat]
+Apr 28 19:30:49 ip-172-31-34-98 web: 19:30:49 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Starting Servlet engine: [Apache Tomcat/9.0.62]
+Apr 28 19:30:49 ip-172-31-34-98 web: 19:30:49 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Initializing Spring embedded WebApplicationContext
+Apr 28 19:30:50 ip-172-31-34-98 web: 19:30:50 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33mcom.zaxxer.hikari.HikariDataSource#033[0;39m: HikariPool-1 - Starting...
+Apr 28 19:30:51 ip-172-31-34-98 web: 19:30:51 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33mcom.zaxxer.hikari.HikariDataSource#033[0;39m: HikariPool-1 - Start completed.
+Apr 28 19:30:51 ip-172-31-34-98 web: 19:30:51 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.jpa.internal.util.LogHelper#033[0;39m: HHH000204: Processing PersistenceUnitInfo [name: default]
+Apr 28 19:30:52 ip-172-31-34-98 web: 19:30:52 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.Version#033[0;39m: HHH000412: Hibernate ORM core version 5.6.8.Final
+Apr 28 19:30:52 ip-172-31-34-98 web: 19:30:52 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.annotations.common.reflection.java.JavaReflectionManager#033[0;39m: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+Apr 28 19:30:52 ip-172-31-34-98 web: 19:30:52 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.dialect.Dialect#033[0;39m: HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+Apr 28 19:30:53 ip-172-31-34-98 web: 19:30:53 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator#033[0;39m: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Apr 28 19:30:56 ip-172-31-34-98 web: 19:30:56 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Starting ProtocolHandler ["http-nio-5000"]
+Apr 28 19:30:56 ip-172-31-34-98 web: 19:30:56 #033[34mINFO #033[0;39m [#033[34mmain#033[0;39m] #033[33morg.springframework.boot.StartupInfoLogger#033[0;39m: Started Application in 12.402 seconds (JVM running for 14.356)
+Apr 29 02:40:46 ip-172-31-34-98 web: 02:40:46 #033[34mINFO #033[0;39m [#033[34mhttp-nio-5000-exec-10#033[0;39m] #033[33morg.apache.juli.logging.DirectJDKLog#033[0;39m: Error parsing HTTP request header
+Apr 29 02:40:46 ip-172-31-34-98 web: Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+Apr 29 02:40:46 ip-172-31-34-98 web: java.lang.IllegalArgumentException: Invalid character found in the request target [/index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 ]. The valid characters are defined in RFC 7230 and RFC 3986
+Apr 29 02:40:46 ip-172-31-34-98 web: at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:494)
+Apr 29 02:40:46 ip-172-31-34-98 web: at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271)
+Apr 29 02:40:46 ip-172-31-34-98 web: at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+Apr 29 02:40:46 ip-172-31-34-98 web: at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+Apr 29 02:40:46 ip-172-31-34-98 web: at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+Apr 29 02:40:46 ip-172-31-34-98 web: at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+Apr 29 02:40:46 ip-172-31-34-98 web: at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+Apr 29 02:40:46 ip-172-31-34-98 web: at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+Apr 29 02:40:46 ip-172-31-34-98 web: at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+Apr 29 02:40:46 ip-172-31-34-98 web: at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+----------------------------------------
+/var/log/eb-engine.log
+----------------------------------------
+2022/04/28 19:30:41.215712 [INFO] Running command /bin/sh -c systemctl show -p ConsistsOf eb-app.target | cut -d= -f2
+2022/04/28 19:30:41.230345 [INFO] web.service
+
+2022/04/28 19:30:41.230366 [INFO] Running command /bin/sh -c systemctl show -p PartOf web.service
+2022/04/28 19:30:41.240544 [INFO] Running command /bin/sh -c systemctl is-active web.service
+2022/04/28 19:30:41.250229 [INFO] Running command /bin/sh -c systemctl disable web.service
+2022/04/28 19:30:41.368383 [INFO] Removed symlink /etc/systemd/system/multi-user.target.wants/web.service.
+
+2022/04/28 19:30:41.368465 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2022/04/28 19:30:41.478500 [INFO] Running command /bin/sh -c systemctl reset-failed
+2022/04/28 19:30:41.488512 [INFO] Register application processes...
+2022/04/28 19:30:41.488524 [INFO] Registering the proc: web
+
+2022/04/28 19:30:41.488535 [INFO] Running command /bin/sh -c systemctl show -p PartOf web.service
+2022/04/28 19:30:41.494981 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2022/04/28 19:30:41.595131 [INFO] Running command /bin/sh -c systemctl reset-failed
+2022/04/28 19:30:41.599274 [INFO] Running command /bin/sh -c systemctl is-enabled eb-app.target
+2022/04/28 19:30:41.602855 [INFO] Running command /bin/sh -c systemctl enable eb-app.target
+2022/04/28 19:30:41.702397 [INFO] Running command /bin/sh -c systemctl start eb-app.target
+2022/04/28 19:30:41.707626 [INFO] Running command /bin/sh -c systemctl enable web.service
+2022/04/28 19:30:41.811443 [INFO] Created symlink from /etc/systemd/system/multi-user.target.wants/web.service to /etc/systemd/system/web.service.
+
+2022/04/28 19:30:41.811479 [INFO] Running command /bin/sh -c systemctl show -p PartOf web.service
+2022/04/28 19:30:41.816627 [INFO] Running command /bin/sh -c systemctl is-active web.service
+2022/04/28 19:30:41.820065 [INFO] Running command /bin/sh -c systemctl start web.service
+2022/04/28 19:30:41.836828 [INFO] Executing instruction: start X-Ray
+2022/04/28 19:30:41.836844 [INFO] X-Ray is not enabled.
+2022/04/28 19:30:41.836849 [INFO] Executing instruction: start proxy with new configuration
+2022/04/28 19:30:41.836868 [INFO] Running command /bin/sh -c /usr/sbin/nginx -t -c /var/proxy/staging/nginx/nginx.conf
+2022/04/28 19:30:41.855741 [INFO] nginx: the configuration file /var/proxy/staging/nginx/nginx.conf syntax is ok
+nginx: configuration file /var/proxy/staging/nginx/nginx.conf test is successful
+
+2022/04/28 19:30:41.855987 [INFO] Running command /bin/sh -c cp -rp /var/proxy/staging/nginx/* /etc/nginx
+2022/04/28 19:30:41.865129 [INFO] Running command /bin/sh -c systemctl show -p PartOf nginx.service
+2022/04/28 19:30:41.876741 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2022/04/28 19:30:42.035074 [INFO] Running command /bin/sh -c systemctl reset-failed
+2022/04/28 19:30:42.043575 [INFO] Running command /bin/sh -c systemctl show -p PartOf nginx.service
+2022/04/28 19:30:42.053406 [INFO] Running command /bin/sh -c systemctl is-active nginx.service
+2022/04/28 19:30:42.063345 [INFO] Running command /bin/sh -c systemctl start nginx.service
+2022/04/28 19:30:42.146477 [INFO] Executing instruction: configureSqsd
+2022/04/28 19:30:42.146494 [INFO] This is a web server environment instance, skip configure sqsd daemon ...
+2022/04/28 19:30:42.146498 [INFO] Executing instruction: startSqsd
+2022/04/28 19:30:42.146503 [INFO] This is a web server environment instance, skip start sqsd daemon ...
+2022/04/28 19:30:42.146507 [INFO] Executing instruction: Track pids in healthd
+2022/04/28 19:30:42.146512 [INFO] This is an enhanced health env...
+2022/04/28 19:30:42.146526 [INFO] Running command /bin/sh -c systemctl show -p ConsistsOf aws-eb.target | cut -d= -f2
+2022/04/28 19:30:42.162100 [INFO] nginx.service cfn-hup.service healthd.service
+
+2022/04/28 19:30:42.162131 [INFO] Running command /bin/sh -c systemctl show -p ConsistsOf eb-app.target | cut -d= -f2
+2022/04/28 19:30:42.177934 [INFO] web.service
+
+2022/04/28 19:30:42.178109 [INFO] Executing instruction: RunAppDeployPostDeployHooks
+2022/04/28 19:30:42.178128 [INFO] Executing platform hooks in .platform/hooks/postdeploy/
+2022/04/28 19:30:42.178143 [INFO] The dir .platform/hooks/postdeploy/ does not exist
+2022/04/28 19:30:42.178150 [INFO] Executing cleanup logic
+2022/04/28 19:30:42.178250 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment successfully generated a 'Procfile'.","timestamp":1651174238918,"severity":"INFO"},{"msg":"Instance deployment completed successfully.","timestamp":1651174242178,"severity":"INFO"}]}]}
+
+2022/04/28 19:30:42.178416 [INFO] Platform Engine finished execution on command: app-deploy
+
+2022/04/28 19:32:21.227283 [INFO] Starting...
+2022/04/28 19:32:21.227330 [INFO] Starting EBPlatform-PlatformEngine
+2022/04/28 19:32:21.227351 [INFO] reading event message file
+2022/04/28 19:32:21.227505 [INFO] Engine received EB command cfn-hup-exec
+
+2022/04/28 19:32:21.310754 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:sa-east-1:047885769879:stack/awseb-e-2akebg5dtm-stack/c91862b0-c4c6-11ec-bfc2-0283843092a2 -r AWSEBAutoScalingGroup --region sa-east-1
+2022/04/28 19:32:21.648043 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:sa-east-1:047885769879:stack/awseb-e-2akebg5dtm-stack/c91862b0-c4c6-11ec-bfc2-0283843092a2 -r AWSEBBeanstalkMetadata --region sa-east-1
+2022/04/28 19:32:21.984374 [INFO] checking whether command tail-log is applicable to this instance...
+2022/04/28 19:32:21.984388 [INFO] this command is applicable to the instance, thus instance should execute command
+2022/04/28 19:32:21.984392 [INFO] Engine command: (tail-log)
+
+2022/04/28 19:32:21.984439 [INFO] Executing instruction: GetTailLogs
+2022/04/28 19:32:21.984445 [INFO] Tail Logs...
+2022/04/28 19:32:21.984681 [INFO] Running command /bin/sh -c tail -n 100 /var/log/web.stdout.log
+2022/04/28 19:32:21.986597 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-engine.log
+2022/04/28 19:32:21.988135 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-hooks.log
+2022/04/28 19:32:21.989574 [INFO] Running command /bin/sh -c tail -n 100 /var/log/nginx/access.log
+2022/04/28 19:32:21.991156 [INFO] Running command /bin/sh -c tail -n 100 /var/log/nginx/error.log
+2022/04/28 19:32:22.112151 [INFO] Executing cleanup logic
+2022/04/28 19:32:22.112277 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment completed successfully.","timestamp":1651174342112,"severity":"INFO"}]}]}
+
+2022/04/28 19:32:22.112411 [INFO] Platform Engine finished execution on command: tail-log
+
+2022/04/29 11:00:29.121274 [INFO] Starting...
+2022/04/29 11:00:29.121320 [INFO] Starting EBPlatform-PlatformEngine
+2022/04/29 11:00:29.121342 [INFO] reading event message file
+2022/04/29 11:00:29.121496 [INFO] Engine received EB command cfn-hup-exec
+
+2022/04/29 11:00:29.213555 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:sa-east-1:047885769879:stack/awseb-e-2akebg5dtm-stack/c91862b0-c4c6-11ec-bfc2-0283843092a2 -r AWSEBAutoScalingGroup --region sa-east-1
+2022/04/29 11:00:29.546282 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:sa-east-1:047885769879:stack/awseb-e-2akebg5dtm-stack/c91862b0-c4c6-11ec-bfc2-0283843092a2 -r AWSEBBeanstalkMetadata --region sa-east-1
+2022/04/29 11:00:29.872066 [INFO] checking whether command tail-log is applicable to this instance...
+2022/04/29 11:00:29.872080 [INFO] this command is applicable to the instance, thus instance should execute command
+2022/04/29 11:00:29.872087 [INFO] Engine command: (tail-log)
+
+2022/04/29 11:00:29.872152 [INFO] Executing instruction: GetTailLogs
+2022/04/29 11:00:29.872158 [INFO] Tail Logs...
+2022/04/29 11:00:29.872408 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-hooks.log
+2022/04/29 11:00:29.874112 [INFO] Running command /bin/sh -c tail -n 100 /var/log/nginx/access.log
+2022/04/29 11:00:29.875747 [INFO] Running command /bin/sh -c tail -n 100 /var/log/nginx/error.log
+2022/04/29 11:00:29.877361 [INFO] Running command /bin/sh -c tail -n 100 /var/log/web.stdout.log
+2022/04/29 11:00:29.878972 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-engine.log
+
+
