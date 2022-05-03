@@ -23,17 +23,17 @@ class RoomApiIntegrationTest extends BaseIntegrationTest {
         setLocalHostBasePath(roomApi.getApiClient(), "/v1");
     }
 
-//    @Test
-//    void testGetRoomSuccess() {
-//        var room = newRoomBuilder().build();
-//        roomRepository.saveAndFlush(room);
-//
-//        assertNotNull(room.getId());//verificar se o id não ta nulo
-//        assertTrue(room.getActive());//garantir que o getactive é verdadeiro
-//
-//        var dto = roomApi.getRoom(room.getId());
-//        assertEquals(room.getId(), dto.getId());
-//        assertEquals(room.getName(), dto.getName());
-//        assertEquals(room.getSeats(), dto.getSeats());
-//    }
+    @Test
+    void testGetRoomSuccess() {
+        var room = newRoomBuilder().build();
+        roomRepository.saveAndFlush(room);
+
+        assertNotNull(room.getId());//verificar se o id não ta nulo
+        assertTrue(room.getActive());//garantir que o getactive é verdadeiro
+
+        var dto = roomApi.getRoom(room.getId());
+        assertEquals(room.getId(), dto.getId());
+        assertEquals(room.getName(), dto.getName());
+        assertEquals(room.getSeats(), dto.getSeats());
+    }
 }
