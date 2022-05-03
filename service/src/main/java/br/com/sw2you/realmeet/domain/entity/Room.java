@@ -17,6 +17,8 @@ public class Room {
     @Column(name = "active", nullable = false)
     private Boolean active;
 
+    public Room() {}
+
     private Room(Long id, String name, Integer seats, Boolean active) {
         this.id = id;
         this.name = name;
@@ -30,9 +32,6 @@ public class Room {
         if (Objects.isNull(active)) {
             active = true;
         }
-    }
-
-    public void Room() {
     }
 
     public Long getId() {
