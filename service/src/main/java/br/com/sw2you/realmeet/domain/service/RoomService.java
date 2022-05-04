@@ -12,21 +12,21 @@ import org.springframework.stereotype.Service;
 public class RoomService {
 
     private final RoomRepository roomRepository;
-    private final RoomMapper roomMaper;
+    private final RoomMapper roomMapper;
 
 
     //usar construtor ao inves do @autowired
-    public RoomService(RoomRepository roomRepository, RoomMapper roomMaper) {
+    public RoomService(RoomRepository roomRepository, RoomMapper roomMapper) {
         this.roomRepository = roomRepository;
-        this.roomMaper = roomMaper;
+        this.roomMapper = roomMapper;
     }
 
     public RoomDTO getRoom(Long id) {
         //verificar se o objeto está nulo
         Objects.requireNonNull(id);
         //roomRepository.findById(id).orElseThrow(() -> new RoomNotFoundException()); melhorar trocando a expreção lambda para metodo reference
-        Room room = roomRepository.findById(id).orElseThrow(RoomNotFoundException::new);
+        Room room = roomRepository.findByIdAndActive(id, true).orElseThrow(RoomNotFoundException::new);
 //        converter room em roomDTO
-        return roomMaper.fromEntityToDto(room);
+        return roomMapper.fromEntityToDto(room);
     }
 }
