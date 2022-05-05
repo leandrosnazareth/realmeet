@@ -2,7 +2,7 @@
 # = Server
 # =================================
 server:
-  port: 8081
+  port: 8080
   servlet:
     context-path: /v1   #  controle de versao
 
