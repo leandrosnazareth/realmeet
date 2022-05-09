@@ -9,8 +9,13 @@ public final class ResponseEntityUtils {
     }
 
 
-    //retornar um responseentity do tipo ok, metodo utilitario
+    //return um responseentity do tipo ok, metodo utilitario
     public static <T> ResponseEntity<T> ok(T body) {
         return ResponseEntity.status(HttpStatus.OK).body(body);
+    }
+
+    //return um responseentity do tipo created, metodo utilitario
+    public static <T> ResponseEntity<T> created(T body) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(body);
     }
 }
