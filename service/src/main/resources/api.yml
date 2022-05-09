@@ -1,11 +1,10 @@
 openapi: 3.0.0
 info:
-  version: '1.0.0'
-  title: 'realmeet'
-  license:
-    name: MIT
+  version: 1.0.0
+  title: realmeet
 servers:
   - url: 'http://localhost:3000'
+
 paths:
   /rooms/{id}:
     get:
@@ -15,14 +14,14 @@ paths:
         - /room
       parameters:
         - name: id
-          required: true
           in: path
+          required: true
           description: ID of the room
           schema:
             type: integer
             format: int64
       responses:
-        '200':
+        200:
           description: 'ok'
           content:
             application/json:
@@ -34,18 +33,50 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResponseError'
+
+  /rooms:
+    post:
+      summary: 'Creates a room'
+      operationId: createRoom
+      tags:
+        - room
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateRoomDTO'
+        required: true
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RoomDTO'
+        422:
+          $ref: '#/components/responses/UnprocessableEntity'
+
 components:
   schemas:
-    RoomDTO:
+    CreateRoomDTO: # para criar a ROOM
       type: object
       properties:
-        id:
-          type: integer
-          format: int64
+        #passar os atributos para cadastrar menos o ID
         name:
           type: string
         seats:
           type: integer
+
+    RoomDTO: #para retornar a ROOM
+      type: object
+      allOf: #retornar tudo do create room dto mais o id
+        - $ref: '#/components/schemas/CreateRoomDTO'
+        - type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+
     ResponseError:
       type: object
       required:
@@ -59,9 +90,13 @@ components:
           type: string
         message:
           type: string
-  securitySchemes:
-    BasicAuth:
-      type: http
-      scheme: basic
-security:
-  - BasicAuth: []
+
+  responses:
+    UnprocessableEntity:
+      description: O servidor entende o tipo de conteúdo da entidade de solicitacao, mas nao conseguiu processar as instrucoes contidas.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/ResponseError'

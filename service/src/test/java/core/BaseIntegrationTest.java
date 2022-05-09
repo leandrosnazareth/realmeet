@@ -30,9 +30,9 @@ public abstract class BaseIntegrationTest {
     protected void setupEach() throws Exception {
     }
 
-    //setar o endereço
-    protected void setLocalHostBasePath(ApiClient apiClient, String path) throws MalformedURLException {
-        apiClient.setBasePath(new URL("http", "localhost", serverPort, path).toString());
+    //setar o endereco
+    protected void setLocalHostBasePath(ApiClient apiClient) throws MalformedURLException {
+        apiClient.setBasePath(new URL("http", "localhost", serverPort, "/v1").toString());
     }
 
     private void setupFlyway() {

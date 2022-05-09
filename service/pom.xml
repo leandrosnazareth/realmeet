@@ -50,7 +50,7 @@
             <version>${mapstruct.version}</version>
         </dependency>
 
-        <!-- Documentation: O Swagger eh usado junto com um conjunto de ferramentas de software de codigo aberto para projetar, construir, documentar e usar serviços da Web RESTful-->
+        <!-- Documentation: O Swagger eh usado junto com um conjunto de ferramentas de software de codigo aberto para projetar, construir, documentar e usar servicos da Web RESTful-->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>

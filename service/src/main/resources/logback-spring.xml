@@ -5,7 +5,7 @@
     <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
         <!--        layout da mensagem-->
         <layout class="ch.qos.logback.classic.PatternLayout">
-<!--            configuração do padrão das mensagens-->
+<!--            configuracao do padrao das mensagens-->
             <Pattern>
                 %d{HH:mm:ss,MMM} %highlight(%-5level) [%blue(%t)] %yellow(%C{1.}): %msg%n%throwable
             </Pattern>

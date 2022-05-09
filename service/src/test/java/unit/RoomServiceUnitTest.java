@@ -21,7 +21,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 class RoomServiceUnitTest {
     private RoomService victim; //vítima
 
-    @Mock // criar tests com injeção de dempendêcia de objetos ficticios para independer do banco de dados
+    @Mock // tests com inject de dempendecia de objetos ficticios para independer do banco de dados
     private RoomRepository roomRepository;
 
     @BeforeEach

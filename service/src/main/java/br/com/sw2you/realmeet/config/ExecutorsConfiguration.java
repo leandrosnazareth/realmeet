@@ -12,10 +12,10 @@ import org.springframework.context.annotation.Configuration;
 public class ExecutorsConfiguration {
 
     //definir tamanho das thread, tamanho das filas de threads para evitar sobrecarga no servidor e envitar que seu servidor seja derrubado
-    //esses parmetros serão passados no application.yml
+    //esses parmetros serao passados no application.yml
     @Bean
     public Executor controllerExecutor(
-            //anotação @value para pegar p valor do arquivo application.yml se não tiver definido no yml assume o valor :xx
+            //anotacao @value para pegar p valor do arquivo application.yml se nao tiver definido no yml assume o valor :xx
             @Value("${realmeet.taskExecutor.pool.coreSize:10}") int corePoolSize,
             @Value("${realmeet.taskExecutor.pool.maxSize:20}") int maxPoolSize,
             @Value("${realmeet.taskExecutor.pool.queueCapacity:50}") int queueCapacity,
