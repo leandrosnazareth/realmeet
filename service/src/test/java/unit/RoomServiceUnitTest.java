@@ -10,6 +10,7 @@ import static utils.TestDataCreator.newRoomBuilder;
 import br.com.sw2you.realmeet.domain.repository.RoomRepository;
 import br.com.sw2you.realmeet.service.RoomService;
 import br.com.sw2you.realmeet.exception.RoomNotFoundException;
+import br.com.sw2you.realmeet.validator.RoomValidator;
 import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,12 +22,14 @@ import org.mockito.junit.jupiter.MockitoExtension;
 class RoomServiceUnitTest {
     private RoomService victim; //vítima
 
-    @Mock // tests com inject de dempendecia de objetos ficticios para independer do banco de dados
+    @Mock // tests com inject de dependência de objetos fictícios para independer do banco de dados
     private RoomRepository roomRepository;
+    @Mock // tests com inject de dependência de objetos fictícios para independer do banco de dados
+    private RoomValidator roomValidator;
 
     @BeforeEach
     void setupEach() {
-        victim = new RoomService(roomRepository, roomMapper());
+        victim = new RoomService(roomRepository, roomMapper(), roomValidator);
     }
 
     @Test

@@ -19,8 +19,8 @@ public class RoomValidator {
 
         //SEATS VALIDATE
         validateRequired(createRoomDTO.getSeats(), ROOM_SEATS, validationErros); // validar nome
-        validateMinValue(createRoomDTO.getSeats(), ROOM_SEATS, ROOM_SEATS_MAX_VALUE, validationErros); // validar quantidade mínima de assentos
-        validateMaxValue(createRoomDTO.getSeats(), ROOM_SEATS, ROOM_SEATS_MIN_VALUE, validationErros); // validar quantidade máxima de assentos
+        validateMinValue(createRoomDTO.getSeats(), ROOM_SEATS, ROOM_SEATS_MIN_VALUE, validationErros); // validar quantidade mínima de assentos
+        validateMaxValue(createRoomDTO.getSeats(), ROOM_SEATS, ROOM_SEATS_MAX_VALUE, validationErros); // validar quantidade máxima de assentos
 
         //verificar se existe erros na lista validationErros
         throwOnError(validationErros);

@@ -62,7 +62,7 @@ public final class ValidatorUtils {
         //verificar se o field mão está é nulo e se o tamanho não é menor que o mínimo permitido
         if (!isNull(field) && field < minValue) {
             //se sim, add a lista de erros
-            validationErrors.add(fieldName, fieldName + BELOW_MIM_VALUE);
+            validationErrors.add(fieldName, fieldName + BELOW_MIN_VALUE);
             return false;
         }
         return true;
