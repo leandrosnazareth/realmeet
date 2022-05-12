@@ -8,7 +8,7 @@ import static utils.TestConstants.DEFAULT_ROOM_ID;
 import static utils.TestDataCreator.newRoomBuilder;
 
 import br.com.sw2you.realmeet.domain.repository.RoomRepository;
-import br.com.sw2you.realmeet.domain.service.RoomService;
+import br.com.sw2you.realmeet.service.RoomService;
 import br.com.sw2you.realmeet.exception.RoomNotFoundException;
 import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;

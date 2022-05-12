@@ -5,7 +5,7 @@ import static java.util.concurrent.CompletableFuture.supplyAsync;
 import br.com.sw2you.realmeet.api.facade.RoomsApi;
 import br.com.sw2you.realmeet.api.model.CreateRoomDTO;
 import br.com.sw2you.realmeet.api.model.RoomDTO;
-import br.com.sw2you.realmeet.domain.service.RoomService;
+import br.com.sw2you.realmeet.service.RoomService;
 import br.com.sw2you.realmeet.util.ResponseEntityUtils;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;

@@ -1,4 +1,4 @@
-package br.com.sw2you.realmeet.domain.service;
+package br.com.sw2you.realmeet.service;
 
 import br.com.sw2you.realmeet.api.model.CreateRoomDTO;
 import br.com.sw2you.realmeet.api.model.RoomDTO;
@@ -6,20 +6,21 @@ import br.com.sw2you.realmeet.domain.entity.Room;
 import br.com.sw2you.realmeet.domain.repository.RoomRepository;
 import br.com.sw2you.realmeet.exception.RoomNotFoundException;
 import br.com.sw2you.realmeet.mapper.RoomMapper;
+import br.com.sw2you.realmeet.validator.RoomValidator;
 import java.util.Objects;
 import org.springframework.stereotype.Service;
 
 @Service
 public class RoomService {
-
     private final RoomRepository roomRepository;
     private final RoomMapper roomMapper;
+    private final RoomValidator roomValidator;
 
 
-    //usar construtor ao invés do @autowired
-    public RoomService(RoomRepository roomRepository, RoomMapper roomMapper) {
+    public RoomService(RoomRepository roomRepository, RoomMapper roomMapper, RoomValidator roomValidator) {
         this.roomRepository = roomRepository;
         this.roomMapper = roomMapper;
+        this.roomValidator = roomValidator;
     }
 
     public RoomDTO getRoom(Long id) {
@@ -32,10 +33,12 @@ public class RoomService {
     }
 
     public RoomDTO createRoom(CreateRoomDTO createRoomDTO){
+        //validar os dados
+        roomValidator.validate(createRoomDTO);
         //transformer roomDTO em rom
-        var room = Room.newBuilder().seats(createRoomDTO.getSeats()).name(createRoomDTO.getName()).build();
+        var room = roomMapper.fromCreateRoom(createRoomDTO);
         roomRepository.save(room);
         //transformar entity room em roomdto para retornar
-        return new RoomDTO().id(room.getId()).seats(room.getSeats()).name(room.getName());
+        return roomMapper.fromEntityToDto(room);
     }
 }
