@@ -4,12 +4,20 @@ import static br.com.sw2you.realmeet.validator.ValidatorConstants.*;
 import static br.com.sw2you.realmeet.validator.ValidatorUtils.*;
 
 import br.com.sw2you.realmeet.api.model.CreateRoomDTO;
+import br.com.sw2you.realmeet.domain.repository.RoomRepository;
+import br.com.sw2you.realmeet.exception.InvalidRequestException;
 import org.springframework.stereotype.Component;
 
 @Component
 public class RoomValidator {
 
-    public void validate(CreateRoomDTO createRoomDTO){
+    private final RoomRepository roomRepository;
+
+    public RoomValidator(RoomRepository roomRepository) {
+        this.roomRepository = roomRepository;
+    }
+
+    public void validate(CreateRoomDTO createRoomDTO) {
         var validationErros = new ValidationErrors();
 
         //ROOM VALIDATE
@@ -24,5 +32,14 @@ public class RoomValidator {
 
         //verificar se existe erros na lista validationErros
         throwOnError(validationErros);
+
+        //validar nome
+        validateNameDuplicate(createRoomDTO.getName());
+    }
+
+    public void validateNameDuplicate(String name) {
+        roomRepository.findByNameAndActive(name, true).ifPresent(__ -> {
+            throw new InvalidRequestException(new ValidationError(ROOM_NAME, ROOM_NAME + DUPLICATE));
+        });
     }
 }

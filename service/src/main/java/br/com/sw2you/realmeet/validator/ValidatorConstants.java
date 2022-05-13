@@ -11,6 +11,7 @@ public class ValidatorConstants {
     public static final String EXCEEDS_MAX_LENGTH = ".exceedsMaxLength"; // tamanho máximo
     public static final String EXCEEDS_MAX_VALUE = ".exceedsMaxValue"; // maior que o valor mínimo
     public static final String BELOW_MIN_VALUE = ".belowMinValue"; // menor que o valor mínimo
+    public static final String DUPLICATE = ".duplicate"; // duplicidade
 
     public ValidatorConstants() {
     }
