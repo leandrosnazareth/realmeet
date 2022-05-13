@@ -3,9 +3,11 @@ package integration;
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static utils.TestConstants.DEFAULT_ROOM_ID;
+import static utils.TestDataCreator.newCreateRoomDTO;
 import static utils.TestDataCreator.newRoomBuilder;
 
 import br.com.sw2you.realmeet.api.facade.RoomApi;
+import br.com.sw2you.realmeet.api.model.CreateRoomDTO;
 import br.com.sw2you.realmeet.domain.repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.HttpClientErrorException;
@@ -51,8 +53,27 @@ class RoomApiIntegrationTest extends BaseIntegrationTest {
 
     @Test
     void testGetRoomDoesNotExists() {
-        //nao insert nada no banco
+        //nao insere nada no banco
         //se tem exception de id que nao
         assertThrows(HttpClientErrorException.NotFound.class, () -> roomApi.getRoom(DEFAULT_ROOM_ID));
+    }
+
+    @Test
+    void testCreateRoomSuccess() {
+        var createRoomDTO = newCreateRoomDTO();
+        var romDTO = roomApi.createRoom(createRoomDTO);
+        assertEquals(createRoomDTO.getName(), romDTO.getName());
+        assertEquals(createRoomDTO.getSeats(), romDTO.getSeats());
+        assertNotNull(romDTO.getId()); //verificar se existe o id após o cadastro
+
+        //verificar se os dados do banco estão ok, conforme cadastrados
+        var room = roomRepository.findById(romDTO.getId()).orElseThrow();//.orElseThrow() se não encontrar lança uma exception
+        assertEquals(romDTO.getName(), room.getName());
+        assertEquals(romDTO.getSeats(), room.getSeats());
+    }
+
+    @Test
+    void testCreateRoomValidationError() {
+        assertThrows(HttpClientErrorException.class, () -> roomApi.createRoom(newCreateRoomDTO().name(null)));
     }
 }
