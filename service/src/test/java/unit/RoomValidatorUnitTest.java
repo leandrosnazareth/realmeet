@@ -84,7 +84,6 @@ public class RoomValidatorUnitTest {
         assertEquals(new ValidationError(ROOM_SEATS, ROOM_SEATS + EXCEEDS_MAX_VALUE), exception.getValidationErrors().getError(0));
     }
 
-
     @Test
     public void testVerificarDuplicidadeNomeRoom() {
         BDDMockito.given(roomRepository.findByNameAndActive(TestConstants.DEFAULT_ROOM_NAME, true))
