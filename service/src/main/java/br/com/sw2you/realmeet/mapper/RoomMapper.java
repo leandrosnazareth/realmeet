@@ -10,5 +10,5 @@ public abstract class RoomMapper {
     //recebe um room dto e transforma em room
     public abstract RoomDTO fromEntityToDto(Room room);
     //recebe um room e transforma em roomdto
-    public abstract Room fromCreateRoom(CreateRoomDTO createRoomDTO);
+    public abstract Room fromCreateRoomDtoToEntity(CreateRoomDTO createRoomDTO);
 }

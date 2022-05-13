@@ -3,6 +3,7 @@ package unit;
 import static org.junit.Assert.assertEquals;
 import static utils.MapperUtils.roomMapper;
 import static utils.TestConstants.DEFAULT_ROOM_ID;
+import static utils.TestDataCreator.newCreateRoomDTO;
 import static utils.TestDataCreator.newRoomBuilder;
 
 import br.com.sw2you.realmeet.mapper.RoomMapper;
@@ -30,12 +31,12 @@ class RoomMapperUnitTest {
         assertEquals(room.getSeats(), dto.getSeats());
     }
 
-//    @Test
-//    void testCreateRoomDtoToEntity() {
-//        var createRoomDTO = newCreateRoomDTO();
-//        var room = victim.fromCreateRoomDtoToEntity(createRoomDTO);
-//
-//        assertEquals(createRoomDTO.getName(), room.getName());
-//        assertEquals(createRoomDTO.getSeats(), room.getSeats());
-//    }
+    @Test
+    void testCreateRoomDtoToEntity() {
+        var createRoomDTO = newCreateRoomDTO();
+        var room = victim.fromCreateRoomDtoToEntity(createRoomDTO);
+
+        assertEquals(createRoomDTO.getName(), room.getName());
+        assertEquals(createRoomDTO.getSeats(), room.getSeats());
+    }
 }

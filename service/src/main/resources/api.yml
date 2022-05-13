@@ -80,20 +80,17 @@ components:
     ResponseError:
       type: object
       required:
-        - code
-        - message
+        - field
+        - errorCode
       properties:
-        code:
-          type: integer
-          format: int32
-        status:
+        field:
           type: string
-        message:
+        errorCode:
           type: string
 
   responses:
     UnprocessableEntity:
-      description: O servidor entende o tipo de conteúdo da entidade de solicitacao, mas nao conseguiu processar as instrucoes contidas.
+      description: O servidor entende o tipo de conteúdo da entidade de solicitacão, mas nao conseguiu processar as instruções contidas.
       content:
         application/json:
           schema:

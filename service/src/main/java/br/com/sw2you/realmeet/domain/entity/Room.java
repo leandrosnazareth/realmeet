@@ -17,7 +17,8 @@ public class Room {
     @Column(name = "active", nullable = false)
     private Boolean active;
 
-    public Room() {}
+    public Room() {
+    }
 
     private Room(Long id, String name, Integer seats, Boolean active) {
         this.id = id;

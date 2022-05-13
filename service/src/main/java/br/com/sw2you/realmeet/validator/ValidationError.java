@@ -3,7 +3,6 @@ package br.com.sw2you.realmeet.validator;
 import java.util.Objects;
 
 public class ValidationError {
-
     private final String field;
     private final String errorCode;
 
@@ -29,15 +28,12 @@ public class ValidationError {
     }
 
     @Override
-    public String toString() {
-        return "ValidationError{" +
-                "field='" + field + '\'' +
-                ", errorCode='" + errorCode + '\'' +
-                '}';
+    public int hashCode() {
+        return Objects.hash(field, errorCode);
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(field, errorCode);
+    public String toString() {
+        return "ValidationError{field='" + field + '\'' + ", errorCode='" + errorCode + '\'' + '}';
     }
 }

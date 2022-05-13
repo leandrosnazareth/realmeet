@@ -36,7 +36,7 @@ public class RoomService {
         //validar os dados
         roomValidator.validate(createRoomDTO);
         //transformer roomDTO em rom
-        var room = roomMapper.fromCreateRoom(createRoomDTO);
+        var room = roomMapper.fromCreateRoomDtoToEntity(createRoomDTO);
         roomRepository.save(room);
         //transformar entity room em roomdto para retornar
         return roomMapper.fromEntityToDto(room);
