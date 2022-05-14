@@ -76,4 +76,19 @@ class RoomApiIntegrationTest extends BaseIntegrationTest {
     void testCreateRoomValidationError() {
         assertThrows(HttpClientErrorException.class, () -> roomApi.createRoom(newCreateRoomDTO().name(null)));
     }
+
+    @Test
+    public void testDeleteRoomSuccess(){
+        //salvar uma room para deletar
+        var roomId = roomRepository.saveAndFlush(newRoomBuilder().build()).getId();
+        //deletar o id
+        roomApi.deleteRoom(roomId);
+        //buscar o id e verificar se ele está com status inativo
+        assertFalse(roomRepository.findById(roomId).orElseThrow().getActive());
+    }
+    @Test // test deletar uma room que não existe
+    public void testDeleteRoomDoesNotExist(){
+        //faço um assert com um código que eu sei que tem no banco
+        assertThrows(HttpClientErrorException.NotFound.class, () -> roomApi.deleteRoom(1L));
+    }
 }

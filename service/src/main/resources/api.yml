@@ -29,10 +29,25 @@ paths:
                 $ref: '#/components/schemas/RoomDTO'
         404:
           description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ResponseError'
+
+    delete:
+      summary: 'Deletes a room by ID'
+      operationId: deleteRoom
+      tags:
+        - /room
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the room
+          schema:
+            type: integer
+            format: int64
+      responses:
+        204:
+          description: 'Deletado com sucesso'
+        404:
+          description: Not found
 
   /rooms:
     post:
