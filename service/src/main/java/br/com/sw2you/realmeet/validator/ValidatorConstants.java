@@ -2,6 +2,7 @@ package br.com.sw2you.realmeet.validator;
 
 public class ValidatorConstants {
 
+    public static final String ROOM_ID = ".id";
     public static final String ROOM_NAME = ".name";
     public static final int ROOM_NAME_MAX_LENGTH = 20; // tamanho máximo definido no banco de dados
     public static final int ROOM_SEATS_MIN_VALUE = 1; // quantidade minima de assentos

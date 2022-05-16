@@ -2,6 +2,7 @@ package br.com.sw2you.realmeet.service;
 
 import br.com.sw2you.realmeet.api.model.CreateRoomDTO;
 import br.com.sw2you.realmeet.api.model.RoomDTO;
+import br.com.sw2you.realmeet.api.model.UpdateRoomDTO;
 import br.com.sw2you.realmeet.domain.entity.Room;
 import br.com.sw2you.realmeet.domain.repository.RoomRepository;
 import br.com.sw2you.realmeet.exception.RoomNotFoundException;
@@ -52,7 +53,14 @@ public class RoomService {
     //deletar uma sala pelo ID, apes desativa a sala, não deleta o registro
     @Transactional
     public void deleteRoom(Long roomId) {
-        getActiveRoomOrThrow(roomId);
+        getActiveRoomOrThrow(roomId);// verifica se o room existe e esta ativo
         roomRepository.deactivate(roomId);
+    }
+
+    @Transactional
+    public void updateRoom(Long roomId, UpdateRoomDTO updateRoomDTO) {
+        roomValidator.validate(roomId, updateRoomDTO);
+        getActiveRoomOrThrow(roomId);// verifica se o room existe e esta ativo
+        roomRepository.updateRoom(roomId, updateRoomDTO.getName(), updateRoomDTO.getSeats());
     }
 }
