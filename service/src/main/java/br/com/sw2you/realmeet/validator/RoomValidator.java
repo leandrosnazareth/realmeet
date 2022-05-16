@@ -2,10 +2,12 @@ package br.com.sw2you.realmeet.validator;
 
 import static br.com.sw2you.realmeet.validator.ValidatorConstants.*;
 import static br.com.sw2you.realmeet.validator.ValidatorUtils.*;
+import static java.util.Objects.isNull;
 
 import br.com.sw2you.realmeet.api.model.CreateRoomDTO;
 import br.com.sw2you.realmeet.api.model.UpdateRoomDTO;
 import br.com.sw2you.realmeet.domain.repository.RoomRepository;
+import java.util.Objects;
 import org.springframework.stereotype.Component;
 
 @Component
