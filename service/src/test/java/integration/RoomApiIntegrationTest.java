@@ -3,11 +3,13 @@ package integration;
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static utils.TestConstants.DEFAULT_ROOM_ID;
+import static utils.TestConstants.TEST_CLIENT_API_KEY;
 import static utils.TestDataCreator.newCreateRoomDTO;
 import static utils.TestDataCreator.newRoomBuilder;
 
 import br.com.sw2you.realmeet.api.facade.RoomApi;
 import br.com.sw2you.realmeet.api.model.CreateRoomDTO;
+import br.com.sw2you.realmeet.api.model.UpdateRoomDTO;
 import br.com.sw2you.realmeet.domain.repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.HttpClientErrorException;
@@ -78,7 +80,7 @@ class RoomApiIntegrationTest extends BaseIntegrationTest {
     }
 
     @Test
-    public void testDeleteRoomSuccess(){
+    public void testDeleteRoomSuccess() {
         //salvar uma room para deletar
         var roomId = roomRepository.saveAndFlush(newRoomBuilder().build()).getId();
         //deletar o id
@@ -86,9 +88,41 @@ class RoomApiIntegrationTest extends BaseIntegrationTest {
         //buscar o id e verificar se ele está com status inativo
         assertFalse(roomRepository.findById(roomId).orElseThrow().getActive());
     }
-    @Test // test deletar uma room que não existe
-    public void testDeleteRoomDoesNotExist(){
+
+    @Test // teste deletar uma room que não existe
+    public void testDeleteRoomDoesNotExist() {
         //faço um assert com um código que eu sei que tem no banco
         assertThrows(HttpClientErrorException.NotFound.class, () -> roomApi.deleteRoom(1L));
+    }
+
+    @Test
+    void testUpdateRoomSuccess() {
+        var room = roomRepository.saveAndFlush(newRoomBuilder().build());
+        //criar um dto diferente para atualizar, concatenar com A para ficar diferente
+        var updateRoomDTO = new UpdateRoomDTO().name(room.getName() + "A").seats(room.getSeats() + 1);
+        //atualiza a rom
+        roomApi.updateRoom(room.getId(), updateRoomDTO);
+
+        var updatedRoom = roomRepository.findById(room.getId()).orElseThrow();
+        assertEquals(updateRoomDTO.getName(), updatedRoom.getName());
+        assertEquals(updateRoomDTO.getSeats(), updatedRoom.getSeats());
+    }
+
+
+    @Test
+    void testUpdateRoomDoesNotExist() {
+        assertThrows(
+                HttpClientErrorException.NotFound.class,
+                () -> roomApi.updateRoom(1L, new UpdateRoomDTO().name("Room").seats(10))
+        );
+    }
+
+    @Test
+    void testUpdateRoomValidationError() {
+        var room = roomRepository.saveAndFlush(newRoomBuilder().build());
+        assertThrows(
+                HttpClientErrorException.UnprocessableEntity.class,
+                () -> roomApi.updateRoom(room.getId(), new UpdateRoomDTO().name(null).seats(10))//name null não existe no banco
+        );
     }
 }
