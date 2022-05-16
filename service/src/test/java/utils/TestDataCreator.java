@@ -18,6 +18,6 @@ public final class TestDataCreator {
 
     //crear o roomdto padrão para testes
     public static CreateRoomDTO newCreateRoomDTO() {
-        return new CreateRoomDTO().name(DEFAULT_ROOM_NAME).seats(DEFAULT_ROOM_SEATS);
+        return (CreateRoomDTO) new CreateRoomDTO().name(DEFAULT_ROOM_NAME).seats(DEFAULT_ROOM_SEATS);
     }
 }

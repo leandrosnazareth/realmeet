@@ -6,7 +6,8 @@ servers:
   - url: 'http://localhost:3000'
 
 paths:
-  /rooms/{id}:
+  /rooms/{id}: #operações passando o id
+    #    GET AQUI
     get:
       summary: 'Retorna a rooms by id'
       operationId: getRoom
@@ -29,7 +30,7 @@ paths:
                 $ref: '#/components/schemas/RoomDTO'
         404:
           description: Not found
-
+    #DELETE AQUI
     delete:
       summary: 'Deletes a room by ID'
       operationId: deleteRoom
@@ -44,12 +45,40 @@ paths:
             type: integer
             format: int64
       responses:
-        204:
+        204: #sucesso
           description: 'Deletado com sucesso'
-        404:
+        404: #id não encontrado
           description: Not found
 
-  /rooms:
+    #    ALTERAÇÃO AQUI
+    put:
+      summary: 'Updates a room by ID'
+      operationId: updateRoom
+      tags:
+        - /room
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the room
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateRoomDTO'
+        required: true
+      responses:
+        204: #sucesso
+          description: 'Atualizado com sucesso'
+        404: #id não encontrado
+          description: Not found
+        422: #erros de validação
+          $ref: '#/components/responses/UnprocessableEntity'
+
+  /rooms: #operações sem passar o ID
     post:
       summary: 'Creates a room'
       operationId: createRoom
@@ -68,12 +97,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/RoomDTO'
-        422:
+        422: #erros de validação
           $ref: '#/components/responses/UnprocessableEntity'
 
 components:
   schemas:
-    CreateRoomDTO: # para criar a ROOM
+    UpdateRoomDTO: # para criar a ROOM
       type: object
       properties:
         #passar os atributos para cadastrar menos o ID
@@ -82,9 +111,15 @@ components:
         seats:
           type: integer
 
+    CreateRoomDTO: # para criar a ROOM
+      type: object
+      #referencia o update roomdto para não repetir código
+      allOf:
+        - $ref: '#/components/schemas/UpdateRoomDTO'
+
     RoomDTO: #para retornar a ROOM
       type: object
-      allOf: #retornar tudo do create room dto mais o id
+      allOf: #referencia o update roomdto para não repetir código, retornar tudo do create room dto mais o id
         - $ref: '#/components/schemas/CreateRoomDTO'
         - type: object
           properties:

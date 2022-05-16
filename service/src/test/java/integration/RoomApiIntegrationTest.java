@@ -74,7 +74,7 @@ class RoomApiIntegrationTest extends BaseIntegrationTest {
 
     @Test
     void testCreateRoomValidationError() {
-        assertThrows(HttpClientErrorException.class, () -> roomApi.createRoom(newCreateRoomDTO().name(null)));
+        assertThrows(HttpClientErrorException.class, () -> roomApi.createRoom((CreateRoomDTO) newCreateRoomDTO().name(null)));
     }
 
     @Test

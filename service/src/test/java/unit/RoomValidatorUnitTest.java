@@ -4,6 +4,7 @@ import static br.com.sw2you.realmeet.validator.ValidatorConstants.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import br.com.sw2you.realmeet.api.model.CreateRoomDTO;
 import br.com.sw2you.realmeet.domain.repository.RoomRepository;
 import br.com.sw2you.realmeet.exception.InvalidRequestException;
 import br.com.sw2you.realmeet.validator.RoomValidator;
@@ -39,7 +40,7 @@ public class RoomValidatorUnitTest {
 
     @Test
     public void testNomeDaSalaPreenchido() {
-        var exception = assertThrows(InvalidRequestException.class, () -> victim.validate(TestDataCreator.newCreateRoomDTO().name(null)));
+        var exception = assertThrows(InvalidRequestException.class, () -> victim.validate((CreateRoomDTO) TestDataCreator.newCreateRoomDTO().name(null)));
         //verificar se existe somente um erro na lista
         assertEquals(1, exception.getValidationErrors().getNumberOfErros());
         //verificar se o teste do índice 0, ou seja, o primeiro, deu certo. No caso se deu errado e coincide com o erro MISSING
@@ -48,7 +49,7 @@ public class RoomValidatorUnitTest {
 
     @Test
     public void testTamanhoMaxNomeRoom() {
-        var exception = assertThrows(InvalidRequestException.class, () -> victim.validate(TestDataCreator.newCreateRoomDTO().name(
+        var exception = assertThrows(InvalidRequestException.class, () -> victim.validate((CreateRoomDTO) TestDataCreator.newCreateRoomDTO().name(
                 //completa uma palavra com a quantidade máxima de caracteres + 1 com letras A
                 StringUtils.rightPad("X", ROOM_NAME_MAX_LENGTH + 1, "A"))));
         //verificar se existe somente um erro na lista
@@ -59,7 +60,7 @@ public class RoomValidatorUnitTest {
 
     @Test
     public void testQuantidadeAssentosPreenchido() {
-        var exception = assertThrows(InvalidRequestException.class, () -> victim.validate(TestDataCreator.newCreateRoomDTO().seats(null)));
+        var exception = assertThrows(InvalidRequestException.class, () -> victim.validate((CreateRoomDTO) TestDataCreator.newCreateRoomDTO().seats(null)));
         //verificar se existe somente um erro na lista
         assertEquals(1, exception.getValidationErrors().getNumberOfErros());
         //verificar se o teste do índice 0, ou seja, o primeiro, deu certo. No caso se deu errado e coincide com o erro MISSING
@@ -68,7 +69,7 @@ public class RoomValidatorUnitTest {
 
     @Test
     public void testValorAbaixoDoMin() {
-        var exception = assertThrows(InvalidRequestException.class, () -> victim.validate(TestDataCreator.newCreateRoomDTO().seats(ROOM_SEATS_MIN_VALUE - 1))); //1-1=0
+        var exception = assertThrows(InvalidRequestException.class, () -> victim.validate((CreateRoomDTO) TestDataCreator.newCreateRoomDTO().seats(ROOM_SEATS_MIN_VALUE - 1))); //1-1=0
         //verificar se existe somente um erro na lista
         assertEquals(1, exception.getValidationErrors().getNumberOfErros());
         //verificar se o teste do índice 0, ou seja, o primeiro, deu certo. No caso se deu errado e coincide com o erro BELOW_MIN_VALUE
@@ -77,7 +78,7 @@ public class RoomValidatorUnitTest {
 
     @Test
     public void testValorAbaixoDoMax() {
-        var exception = assertThrows(InvalidRequestException.class, () -> victim.validate(TestDataCreator.newCreateRoomDTO().seats(ROOM_SEATS_MAX_VALUE + 1))); //1-1=0
+        var exception = assertThrows(InvalidRequestException.class, () -> victim.validate((CreateRoomDTO) TestDataCreator.newCreateRoomDTO().seats(ROOM_SEATS_MAX_VALUE + 1))); //1-1=0
         //verificar se existe somente um erro na lista
         assertEquals(1, exception.getValidationErrors().getNumberOfErros());
         //verificar se o teste do índice 0, ou seja, o primeiro, deu certo. No caso se deu errado e coincide com o erro BELOW_MIN_VALUE
