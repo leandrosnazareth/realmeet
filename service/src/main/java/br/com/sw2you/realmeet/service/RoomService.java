@@ -35,9 +35,8 @@ public class RoomService {
     //verificar se existe a room ativo no banco
     private Room getActiveRoomOrThrow(Long id) {
         //roomRepository.findById(id).orElseThrow(() -> new RoomNotFoundException()); melhorar trocando a expressão lambda para método reference
-        Room room = roomRepository.findByIdAndActive(id, true).orElseThrow(RoomNotFoundException::new);
 //        converter room em roomDTO
-        return room;
+        return roomRepository.findByIdAndActive(id, true).orElseThrow(RoomNotFoundException::new);
     }
 
     public RoomDTO createRoom(CreateRoomDTO createRoomDTO) {
@@ -59,8 +58,8 @@ public class RoomService {
 
     @Transactional
     public void updateRoom(Long roomId, UpdateRoomDTO updateRoomDTO) {
-        roomValidator.validate(roomId, updateRoomDTO);
         getActiveRoomOrThrow(roomId);// verifica se o room existe e esta ativo
+        roomValidator.validate(roomId, updateRoomDTO);
         roomRepository.updateRoom(roomId, updateRoomDTO.getName(), updateRoomDTO.getSeats());
     }
 }
