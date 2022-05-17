@@ -15,7 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class RoomController implements RoomsApi {
+public class RoomController implements RoomsApi { //RoomApi gerado pelo swagger
     private final Executor controllersExecutor;
     private final RoomService roomService;
 
@@ -26,13 +26,13 @@ public class RoomController implements RoomsApi {
 
     @Override
     public CompletableFuture<ResponseEntity<RoomDTO>> getRoom(Long id) {
-        //retorn supplyAsync
+        //return supplyAsync
         return supplyAsync(() -> roomService.getRoom(id), controllersExecutor).thenApply(ResponseEntityUtils::ok);
     }
 
     @Override
     public CompletableFuture<ResponseEntity<RoomDTO>> createRoom(CreateRoomDTO createRoomDTO) {
-        //retorn supplyAsync
+        //return supplyAsync
         return supplyAsync(() -> roomService.createRoom(createRoomDTO), controllersExecutor).thenApply(ResponseEntityUtils::created);
     }
 

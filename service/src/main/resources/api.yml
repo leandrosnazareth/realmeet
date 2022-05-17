@@ -100,8 +100,34 @@ paths:
         422: #erros de validação
           $ref: '#/components/responses/UnprocessableEntity'
 
+#----------ALLOCATION-------------
+  /allocations: #operações sem passar o ID
+    post:
+      summary: 'Creates a allocation'
+      operationId: createAllocation
+      tags:
+        - allocation
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateAllocationDTO'
+        required: true
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AllocationDTO'
+        422: #erros de validação
+          $ref: '#/components/responses/UnprocessableEntity'
+
+
+
 components:
   schemas:
+#------------INICIO ROOM DTO----------
     UpdateRoomDTO: # para criar a ROOM
       type: object
       properties:
@@ -110,7 +136,6 @@ components:
           type: string
         seats:
           type: integer
-
     CreateRoomDTO: # para criar a ROOM
       type: object
       #referencia o update roomdto para não repetir código
@@ -126,6 +151,39 @@ components:
             id:
               type: integer
               format: int64
+#------------FIM ROOM DTO----------
+
+#------------INICIO ALLOCATION DTO----------
+    CreateAllocationDTO: # para criar a Allocation
+      type: object
+      properties:
+        #passar os atributos para cadastrar menos o ID
+        subject:
+          type: string
+        startAt:
+          type: string
+          format: date-time
+        endAt:
+          type: string
+          format: date-time
+        roomID:
+          type: integer
+          format: int64
+        employeeName:
+          type: string
+        employeeEmail:
+          type: string
+
+    AllocationDTO: #para retornar a Allocation
+      type: object
+      allOf: #referencia o update AllocationDTO para não repetir código, retornar tudo do create Allocation dto mais o id
+        - $ref: '#/components/schemas/CreateAllocationDTO'
+        - type: object
+          properties:
+            id:
+              type: integer
+              format: int64
+#------------FIM ALLOCATION DTO----------
 
     ResponseError:
       type: object
