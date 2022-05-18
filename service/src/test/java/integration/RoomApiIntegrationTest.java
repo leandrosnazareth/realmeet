@@ -26,7 +26,7 @@ class RoomApiIntegrationTest extends BaseIntegrationTest {
 
     @Override
     protected void setupEach() throws Exception {
-        setLocalHostBasePath(roomApi.getApiClient());
+        setLocalHostBasePath(roomApi.getApiClient(), "/v1");
     }
 
     @Test

@@ -31,8 +31,8 @@ public abstract class BaseIntegrationTest {
     }
 
     //setar o endereco
-    protected void setLocalHostBasePath(ApiClient apiClient) throws MalformedURLException {
-        apiClient.setBasePath(new URL("http", "localhost", serverPort, "/v1").toString());
+    protected void setLocalHostBasePath(ApiClient apiClient, String path) throws MalformedURLException {
+        apiClient.setBasePath(new URL("http", "localhost", serverPort, path).toString());
     }
 
     private void setupFlyway() {

@@ -21,6 +21,6 @@ public abstract class AllocationMapper {
     //recebe um allocation e transforma em allocationdto
     @Mapping(source = "employee.name", target = "employeeName")
     @Mapping(source = "employee.email", target = "employeeEmail")
-//    @Mapping(source = "room.id", target = "roomId")
+    @Mapping(source = "room.id", target = "roomId")
     public abstract AllocationDTO fromEntityToAllocationDTO(Allocation allocation);
 }

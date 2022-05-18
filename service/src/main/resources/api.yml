@@ -17,7 +17,7 @@ paths:
         - name: id
           in: path
           required: true
-          description: ID of the room
+          description: Id of the room
           schema:
             type: integer
             format: int64
@@ -32,7 +32,7 @@ paths:
           description: Not found
     #DELETE AQUI
     delete:
-      summary: 'Deletes a room by ID'
+      summary: 'Deletes a room by Id'
       operationId: deleteRoom
       tags:
         - /room
@@ -40,7 +40,7 @@ paths:
         - name: id
           in: path
           required: true
-          description: ID of the room
+          description: Id of the room
           schema:
             type: integer
             format: int64
@@ -52,7 +52,7 @@ paths:
 
     #    ALTERAÇÃO AQUI
     put:
-      summary: 'Updates a room by ID'
+      summary: 'Updates a room by Id'
       operationId: updateRoom
       tags:
         - /room
@@ -60,7 +60,7 @@ paths:
         - name: id
           in: path
           required: true
-          description: ID of the room
+          description: Id of the room
           schema:
             type: integer
             format: int64
@@ -78,7 +78,7 @@ paths:
         422: #erros de validação
           $ref: '#/components/responses/UnprocessableEntity'
 
-  /rooms: #operações sem passar o ID
+  /rooms: #operações sem passar o Id
     post:
       summary: 'Creates a room'
       operationId: createRoom
@@ -101,7 +101,7 @@ paths:
           $ref: '#/components/responses/UnprocessableEntity'
 
 #----------ALLOCATION-------------
-  /allocations: #operações sem passar o ID
+  /allocations: #operações sem passar o Id
     post:
       summary: 'Creates a allocation'
       operationId: createAllocation
@@ -130,7 +130,7 @@ components:
     UpdateRoomDTO: # para criar a ROOM
       type: object
       properties:
-        #passar os atributos para cadastrar menos o ID
+        #passar os atributos para cadastrar menos o Id
         name:
           type: string
         seats:
@@ -156,7 +156,7 @@ components:
     CreateAllocationDTO: # para criar a Allocation
       type: object
       properties:
-        #passar os atributos para cadastrar menos o ID
+        #passar os atributos para cadastrar menos o Id
         subject:
           type: string
         startAt:
@@ -165,7 +165,7 @@ components:
         endAt:
           type: string
           format: date-time
-        roomID:
+        roomId:
           type: integer
           format: int64
         employeeName:
