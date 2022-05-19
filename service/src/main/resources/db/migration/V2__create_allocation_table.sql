@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `allocation` (
+CREATE TABLE `allocation` (
   `id`              BIGINT NOT NULL AUTO_INCREMENT,
   `room_id`         BIGINT NOT NULL,
   `employee_name`   VARCHAR(20) NOT NULL,

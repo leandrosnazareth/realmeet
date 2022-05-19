@@ -3,7 +3,6 @@ package integration;
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static utils.TestConstants.DEFAULT_ROOM_ID;
-import static utils.TestConstants.TEST_CLIENT_API_KEY;
 import static utils.TestDataCreator.newCreateRoomDTO;
 import static utils.TestDataCreator.newRoomBuilder;
 
