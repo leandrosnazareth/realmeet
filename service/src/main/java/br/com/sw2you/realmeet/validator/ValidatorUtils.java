@@ -13,7 +13,7 @@ public final class ValidatorUtils {
 
     //recebe a lista de erros e verifica se existe erros
     public static void throwOnError(ValidationErrors validationErrors) {
-        if (validationErrors.hasErros()) {
+        if (validationErrors.hasErrors()) {
             throw new InvalidRequestException(validationErrors);
         }
     }

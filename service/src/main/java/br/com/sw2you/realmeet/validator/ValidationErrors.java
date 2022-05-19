@@ -7,8 +7,7 @@ import org.springframework.data.util.Streamable;
 
 public class ValidationErrors implements Streamable<ValidationError> {
 
-    private List<ValidationError> validationErrorList;
-
+    private final List<ValidationError> validationErrorList;
 
     public ValidationErrors() {
         this.validationErrorList = new ArrayList<>();
@@ -23,27 +22,24 @@ public class ValidationErrors implements Streamable<ValidationError> {
         return this;
     }
 
-    //retornar o erro com base no index
+    //    //retornar o erro com base no index
     public ValidationError getError(int index) {
         return validationErrorList.get(index);
     }
-
-    //retornar quantidade de erros
-    public int getNumberOfErros() {
+    //    //retornar quantidade de erros
+    public int getNumberOfErrors() {
         return validationErrorList.size();
     }
 
-    //verificar se tem erros na lista
-    public boolean hasErros() {
-        //verifica se a lista não tem itens
+    //
+//    //verificar se tem erros na lista
+    public boolean hasErrors() {
         return !validationErrorList.isEmpty();
     }
 
     @Override
     public String toString() {
-        return "ValidationErrors{" +
-                "validationErrorList=" + validationErrorList +
-                '}';
+        return "ValidationErrors{validationErrorList=" + validationErrorList + '}';
     }
 
     @Override

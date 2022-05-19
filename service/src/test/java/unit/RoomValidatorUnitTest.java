@@ -42,7 +42,7 @@ public class RoomValidatorUnitTest {
     public void testNomeDaSalaPreenchido() {
         var exception = assertThrows(InvalidRequestException.class, () -> victim.validate((CreateRoomDTO) TestDataCreator.newCreateRoomDTO().name(null)));
         //verificar se existe somente um erro na lista
-        assertEquals(1, exception.getValidationErrors().getNumberOfErros());
+        assertEquals(1, exception.getValidationErrors().getNumberOfErrors());
         //verificar se o teste do índice 0, ou seja, o primeiro, deu certo. No caso se deu errado e coincide com o erro MISSING
         assertEquals(new ValidationError(ROOM_NAME, ROOM_NAME + MISSING), exception.getValidationErrors().getError(0));
     }
@@ -53,7 +53,7 @@ public class RoomValidatorUnitTest {
                 //completa uma palavra com a quantidade máxima de caracteres + 1 com letras A
                 StringUtils.rightPad("X", ROOM_NAME_MAX_LENGTH + 1, "A"))));
         //verificar se existe somente um erro na lista
-        assertEquals(1, exception.getValidationErrors().getNumberOfErros());
+        assertEquals(1, exception.getValidationErrors().getNumberOfErrors());
         //verificar se o teste do índice 0, ou seja, o primeiro, deu certo. No caso se deu errado e coincide com o erro EXCEEDS_MAX_LENGTH
         assertEquals(new ValidationError(ROOM_NAME, ROOM_NAME + EXCEEDS_MAX_LENGTH), exception.getValidationErrors().getError(0));
     }
@@ -62,7 +62,7 @@ public class RoomValidatorUnitTest {
     public void testQuantidadeAssentosPreenchido() {
         var exception = assertThrows(InvalidRequestException.class, () -> victim.validate((CreateRoomDTO) TestDataCreator.newCreateRoomDTO().seats(null)));
         //verificar se existe somente um erro na lista
-        assertEquals(1, exception.getValidationErrors().getNumberOfErros());
+        assertEquals(1, exception.getValidationErrors().getNumberOfErrors());
         //verificar se o teste do índice 0, ou seja, o primeiro, deu certo. No caso se deu errado e coincide com o erro MISSING
         assertEquals(new ValidationError(ROOM_SEATS, ROOM_SEATS + MISSING), exception.getValidationErrors().getError(0));
     }
@@ -71,7 +71,7 @@ public class RoomValidatorUnitTest {
     public void testValorAbaixoDoMin() {
         var exception = assertThrows(InvalidRequestException.class, () -> victim.validate((CreateRoomDTO) TestDataCreator.newCreateRoomDTO().seats(ROOM_SEATS_MIN_VALUE - 1))); //1-1=0
         //verificar se existe somente um erro na lista
-        assertEquals(1, exception.getValidationErrors().getNumberOfErros());
+        assertEquals(1, exception.getValidationErrors().getNumberOfErrors());
         //verificar se o teste do índice 0, ou seja, o primeiro, deu certo. No caso se deu errado e coincide com o erro BELOW_MIN_VALUE
         assertEquals(new ValidationError(ROOM_SEATS, ROOM_SEATS + BELOW_MIN_VALUE), exception.getValidationErrors().getError(0));
     }
@@ -80,7 +80,7 @@ public class RoomValidatorUnitTest {
     public void testValorAbaixoDoMax() {
         var exception = assertThrows(InvalidRequestException.class, () -> victim.validate((CreateRoomDTO) TestDataCreator.newCreateRoomDTO().seats(ROOM_SEATS_MAX_VALUE + 1))); //1-1=0
         //verificar se existe somente um erro na lista
-        assertEquals(1, exception.getValidationErrors().getNumberOfErros());
+        assertEquals(1, exception.getValidationErrors().getNumberOfErrors());
         //verificar se o teste do índice 0, ou seja, o primeiro, deu certo. No caso se deu errado e coincide com o erro BELOW_MIN_VALUE
         assertEquals(new ValidationError(ROOM_SEATS, ROOM_SEATS + EXCEEDS_MAX_VALUE), exception.getValidationErrors().getError(0));
     }
@@ -92,7 +92,7 @@ public class RoomValidatorUnitTest {
         var exception = assertThrows(InvalidRequestException.class, () -> victim.validate(TestDataCreator.newCreateRoomDTO()));
 
         //verificar se existe somente um erro na lista
-        assertEquals(1, exception.getValidationErrors().getNumberOfErros());
+        assertEquals(1, exception.getValidationErrors().getNumberOfErrors());
         //verificar se o teste do índice 0, ou seja, o primeiro, deu certo. No caso se deu errado e coincide com o erro DUPLICATE
         assertEquals(new ValidationError(ROOM_NAME, ROOM_NAME + DUPLICATE), exception.getValidationErrors().getError(0));
     }
