@@ -100,7 +100,7 @@ paths:
         422: #erros de validação
           $ref: '#/components/responses/UnprocessableEntity'
 
-#----------INICIO ALLOCATION-------------
+  #----------INICIO ALLOCATION-------------
   /allocations: #operações sem passar o Id
     post:
       summary: 'Creates a allocation'
@@ -123,6 +123,7 @@ paths:
         422: #erros de validação
           $ref: '#/components/responses/UnprocessableEntity'
 
+      #    DELETE AQUI
   /allocations/{id}:
     delete:
       summary: 'Deletes allocation by Id'
@@ -144,11 +145,39 @@ paths:
           description: Not found
         422:
           $ref: '#/components/responses/UnprocessableEntity'
+
+      #    ALTERAÇÃO AQUI
+    put:
+      summary: 'Updates a allocation by Id'
+      operationId: updateAllocation
+      tags:
+        - /allocation
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Id of the allocation
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateAllocationDTO'
+        required: true
+      responses:
+        204: #sucesso
+          description: 'Atualizado com sucesso'
+        404: #id não encontrado
+          description: Not found
+        422: #erros de validação
+          $ref: '#/components/responses/UnprocessableEntity'
 #----------FIM ALLOCATION-------------
 
 components:
   schemas:
-#------------INICIO ROOM DTO----------
+    #------------INICIO ROOM DTO----------
     UpdateRoomDTO: # para criar a ROOM
       type: object
       properties:
@@ -172,13 +201,12 @@ components:
             id:
               type: integer
               format: int64
-#------------FIM ROOM DTO----------
+    #------------FIM ROOM DTO----------
 
-#------------INICIO ALLOCATION DTO----------
-    CreateAllocationDTO: # para criar a Allocation
+    #------------INICIO ALLOCATION DTO----------
+    UpdateAllocationDTO: # para alterar a Allocation
       type: object
       properties:
-        #passar os atributos para cadastrar menos o Id
         subject:
           type: string
         startAt:
@@ -187,13 +215,20 @@ components:
         endAt:
           type: string
           format: date-time
-        roomId:
-          type: integer
-          format: int64
-        employeeName:
-          type: string
-        employeeEmail:
-          type: string
+
+    CreateAllocationDTO: # para criar a Allocation
+      type: object
+      allOf: #referencia o update AllocationDTO para não repetir código, retornar tudo do create Allocation dto mais o id
+        - $ref: '#/components/schemas/UpdateAllocationDTO'
+        - type: object
+          properties:
+            roomId:
+              type: integer
+              format: int64
+            employeeName:
+              type: string
+            employeeEmail:
+              type: string
 
     AllocationDTO: #para retornar a Allocation
       type: object
@@ -204,7 +239,7 @@ components:
             id:
               type: integer
               format: int64
-#------------FIM ALLOCATION DTO----------
+    #------------FIM ALLOCATION DTO----------
 
     ResponseError:
       type: object

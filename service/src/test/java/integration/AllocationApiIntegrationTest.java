@@ -1,7 +1,6 @@
 package integration;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static utils.TestConstants.TEST_CLIENT_API_KEY;
 import static utils.TestDataCreator.*;
 
 import br.com.sw2you.realmeet.api.facade.AllocationApi;

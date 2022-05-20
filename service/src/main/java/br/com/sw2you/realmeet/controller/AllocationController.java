@@ -4,10 +4,7 @@ import static java.util.concurrent.CompletableFuture.runAsync;
 import static java.util.concurrent.CompletableFuture.supplyAsync;
 
 import br.com.sw2you.realmeet.api.facade.AllocationsApi;
-import br.com.sw2you.realmeet.api.model.AllocationDTO;
-import br.com.sw2you.realmeet.api.model.CreateAllocationDTO;
-import br.com.sw2you.realmeet.api.model.CreateRoomDTO;
-import br.com.sw2you.realmeet.api.model.RoomDTO;
+import br.com.sw2you.realmeet.api.model.*;
 import br.com.sw2you.realmeet.service.AllocationService;
 import br.com.sw2you.realmeet.util.ResponseEntityUtils;
 import java.util.Optional;
@@ -37,6 +34,12 @@ public class AllocationController implements AllocationsApi { //RoomApi gerado p
     @Override
     public CompletableFuture<ResponseEntity<Void>> deleteAllocation(Long id) {
         return runAsync(() -> allocationService.deleteAllocation(id), controllersExecutor)
+                .thenApply(ResponseEntityUtils::noContent);
+    }
+
+    @Override
+    public CompletableFuture<ResponseEntity<Void>> updateAllocation(Long id, UpdateAllocationDTO updateAllocationDTO) {
+        return runAsync(() -> allocationService.updateAllocation(id, updateAllocationDTO), controllersExecutor)
                 .thenApply(ResponseEntityUtils::noContent);
     }
 }

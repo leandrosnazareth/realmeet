@@ -12,9 +12,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface AllocationRepository extends JpaRepository<Allocation, Long> {
     @Modifying(clearAutomatically = true, flushAutomatically = true)
-    @Query(
-            "UPDATE Allocation a SET a.subject = :subject, a.startAt = :startAt, a.endAt = :endAt WHERE a.id = :allocationId"
-    )
+    @Query("UPDATE Allocation a SET a.subject = :subject, a.startAt = :startAt, a.endAt = :endAt WHERE a.id = :allocationId")
     void updateAllocation(
             @Param("allocationId") Long allocationId,
             @Param("subject") String subject,
@@ -22,13 +20,10 @@ public interface AllocationRepository extends JpaRepository<Allocation, Long> {
             @Param("endAt") OffsetDateTime endAt
     );
 
-    @Query(
-            "SELECT a FROM Allocation a WHERE " +
-                    "(:employeeEmail IS NULL OR a.employee.email = :employeeEmail) AND " +
+    @Query("SELECT a FROM Allocation a WHERE (:employeeEmail IS NULL OR a.employee.email = :employeeEmail) AND " +
                     "(:roomId IS NULL OR a.room.id = :roomId) AND " +
                     "(:startAt IS NULL OR a.startAt >= :startAt) AND " +
-                    "(:endAt IS NULL OR a.endAt <= :endAt)"
-    )
+                    "(:endAt IS NULL OR a.endAt <= :endAt)")
     Page<Allocation> findAllWithFilters(
             @Param("employeeEmail") String employeeEmail,
             @Param("roomId") Long roomId,
