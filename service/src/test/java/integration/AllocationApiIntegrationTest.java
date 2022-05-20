@@ -17,13 +17,10 @@ import utils.TestDataCreator;
 class AllocationApiIntegrationTest extends BaseIntegrationTest {
     @Autowired
     private AllocationApi allocationApi;
-
     @Autowired
     private RoomRepository roomRepository;
-
     @Autowired
     private AllocationRepository allocationRepository;
-
     @Override
     protected void setupEach() throws Exception {
         setLocalHostBasePath(allocationApi.getApiClient(), "/v1");
