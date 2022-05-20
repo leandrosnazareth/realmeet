@@ -37,7 +37,7 @@ public class RoomService {
     private Room getActiveRoomOrThrow(Long id) {
         //roomRepository.findById(id).orElseThrow(() -> new RoomNotFoundException()); melhorar trocando a expressão lambda para método reference
 //        converter room em roomDTO
-        return roomRepository.findByIdAndActive(id, true).orElseThrow(() -> new AllocationNotFoundException("Allocation not found: "+id));
+        return roomRepository.findByIdAndActive(id, true).orElseThrow(() -> new RoomNotFoundException("Room not found: "+id));
     }
 
     public RoomDTO createRoom(CreateRoomDTO createRoomDTO) {
