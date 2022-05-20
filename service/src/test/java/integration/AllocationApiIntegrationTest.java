@@ -1,12 +1,13 @@
 package integration;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static utils.TestDataCreator.newCreateAllocationDTO;
-import static utils.TestDataCreator.newRoomBuilder;
+import static utils.TestConstants.TEST_CLIENT_API_KEY;
+import static utils.TestDataCreator.*;
 
 import br.com.sw2you.realmeet.api.facade.AllocationApi;
 import br.com.sw2you.realmeet.domain.repository.AllocationRepository;
 import br.com.sw2you.realmeet.domain.repository.RoomRepository;
+import java.time.OffsetDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.HttpClientErrorException;
 import core.BaseIntegrationTest;
@@ -62,4 +63,30 @@ class AllocationApiIntegrationTest extends BaseIntegrationTest {
         );
     }
 
+    @Test
+    void testDeleteAllocationSuccess() {
+        var room = roomRepository.saveAndFlush(newRoomBuilder().build());
+        var allocation = allocationRepository.saveAndFlush(newAllocationBuilder(room).build());
+
+        allocationApi.deleteAllocation(allocation.getId());
+        assertFalse(allocationRepository.findById(allocation.getId()).isPresent());
+    }
+
+    @Test
+    void testDeleteAllocationInThePast() {
+        var room = roomRepository.saveAndFlush(newRoomBuilder().build());
+        var allocation = allocationRepository.saveAndFlush(
+                newAllocationBuilder(room).startAt(OffsetDateTime.now().minusDays(1)).endAt(OffsetDateTime.now().minusDays(1).plusHours(1)).build()
+        );
+
+        assertThrows(
+                HttpClientErrorException.UnprocessableEntity.class,
+                () -> allocationApi.deleteAllocation(allocation.getId())
+        );
+    }
+
+    @Test
+    void testDeleteAllocationDoesNotExist() {
+        assertThrows(HttpClientErrorException.NotFound.class, () -> allocationApi.deleteAllocation(1L));
+    }
 }

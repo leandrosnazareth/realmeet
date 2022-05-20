@@ -100,7 +100,7 @@ paths:
         422: #erros de validação
           $ref: '#/components/responses/UnprocessableEntity'
 
-#----------ALLOCATION-------------
+#----------INICIO ALLOCATION-------------
   /allocations: #operações sem passar o Id
     post:
       summary: 'Creates a allocation'
@@ -122,7 +122,29 @@ paths:
                 $ref: '#/components/schemas/AllocationDTO'
         422: #erros de validação
           $ref: '#/components/responses/UnprocessableEntity'
-#----------ALLOCATION-------------
+
+  /allocations/{id}:
+    delete:
+      summary: 'Deletes allocation by Id'
+      operationId: deleteAllocation
+      tags:
+        - /allocation
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Id of the allocation
+          schema:
+            type: integer
+            format: int64
+      responses:
+        204: #sucesso
+          description: 'Deletado com sucesso'
+        404: #id não encontrado
+          description: Not found
+        422:
+          $ref: '#/components/responses/UnprocessableEntity'
+#----------FIM ALLOCATION-------------
 
 components:
   schemas:

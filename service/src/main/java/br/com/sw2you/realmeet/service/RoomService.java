@@ -5,6 +5,7 @@ import br.com.sw2you.realmeet.api.model.RoomDTO;
 import br.com.sw2you.realmeet.api.model.UpdateRoomDTO;
 import br.com.sw2you.realmeet.domain.entity.Room;
 import br.com.sw2you.realmeet.domain.repository.RoomRepository;
+import br.com.sw2you.realmeet.exception.AllocationNotFoundException;
 import br.com.sw2you.realmeet.exception.RoomNotFoundException;
 import br.com.sw2you.realmeet.mapper.RoomMapper;
 import br.com.sw2you.realmeet.validator.RoomValidator;
@@ -36,7 +37,7 @@ public class RoomService {
     private Room getActiveRoomOrThrow(Long id) {
         //roomRepository.findById(id).orElseThrow(() -> new RoomNotFoundException()); melhorar trocando a expressão lambda para método reference
 //        converter room em roomDTO
-        return roomRepository.findByIdAndActive(id, true).orElseThrow(RoomNotFoundException::new);
+        return roomRepository.findByIdAndActive(id, true).orElseThrow(() -> new AllocationNotFoundException("Allocation not found: "+id));
     }
 
     public RoomDTO createRoom(CreateRoomDTO createRoomDTO) {

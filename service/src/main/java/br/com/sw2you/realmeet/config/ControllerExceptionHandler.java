@@ -4,6 +4,7 @@ package br.com.sw2you.realmeet.config;
 import static br.com.sw2you.realmeet.util.ResponseEntityUtils.notFound;
 
 import br.com.sw2you.realmeet.api.model.ResponseError;
+import br.com.sw2you.realmeet.exception.AllocationNotFoundException;
 import br.com.sw2you.realmeet.exception.InvalidRequestException;
 import br.com.sw2you.realmeet.exception.RoomNotFoundException;
 import java.util.List;
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ControllerExceptionHandler {
 
-    @ExceptionHandler({ RoomNotFoundException.class})
+    @ExceptionHandler({ RoomNotFoundException.class, AllocationNotFoundException.class})
     public ResponseEntity<Object> handleNotFoundException(Exception exception) {
         return notFound();
     }
