@@ -31,7 +31,5 @@ logging:
 # = RealMeet
 # =================================
 realmeet:
-  taskExecutor:
-    pool:
-      coreSize: 50
-        maxSize: 50
+  allocations:
+    maxFilterLimit: 50
