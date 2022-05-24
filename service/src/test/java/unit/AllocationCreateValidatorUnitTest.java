@@ -215,6 +215,7 @@ class AllocationCreateValidatorUnitTest extends BaseUnitTest {
         assertFalse(isScheduleAllowed(tomorrowAt(4), tomorrowAt(7), tomorrowAt(6), tomorrowAt(8)));
     }
 
+    //passo uma hora e retorna essa hora do próximo dia
     private OffsetDateTime tomorrowAt(int hour) {
         return OffsetDateTime.of(LocalDate.now().plusDays(1), LocalTime.of(hour, 0), DEFAULT_TIMEZONE);
     }

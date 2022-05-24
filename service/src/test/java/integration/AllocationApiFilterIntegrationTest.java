@@ -195,6 +195,7 @@ class AllocationApiFilterIntegrationTest extends BaseIntegrationTest {
         );
     }
 
+    //criar uma lista de allocations
     private List<Allocation> persistAllocations(int numberOfAllocations) {
         var room = roomRepository.saveAndFlush(newRoomBuilder().build());
 
