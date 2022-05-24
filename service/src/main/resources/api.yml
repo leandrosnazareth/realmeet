@@ -102,6 +102,44 @@ paths:
 
   #----------INICIO ALLOCATION-------------
   /allocations: #operações sem passar o Id
+    get:
+      summary: 'Lists allocations'
+      operationId: listAllocations
+      tags:
+        - allocation
+      parameters:
+        - name: employeeEmail
+          in: query
+          description: Email of the employee
+          schema:
+            type: string
+        - name: roomId
+          in: query
+          description: Room ID
+          schema:
+            type: integer
+            format: int64
+        - name: startAt
+          in: query
+          description: Allocation start time
+          schema:
+            type: string
+            format: date
+        - name: endAt
+          in: query
+          description: Allocation end time
+          schema:
+            type: string
+            format: date
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AllocationDTO'
     post:
       summary: 'Creates a allocation'
       operationId: createAllocation

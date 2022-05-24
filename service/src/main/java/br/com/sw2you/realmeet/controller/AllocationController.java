@@ -4,15 +4,17 @@ import static java.util.concurrent.CompletableFuture.runAsync;
 import static java.util.concurrent.CompletableFuture.supplyAsync;
 
 import br.com.sw2you.realmeet.api.facade.AllocationsApi;
-import br.com.sw2you.realmeet.api.model.*;
+import br.com.sw2you.realmeet.api.model.AllocationDTO;
+import br.com.sw2you.realmeet.api.model.CreateAllocationDTO;
+import br.com.sw2you.realmeet.api.model.UpdateAllocationDTO;
 import br.com.sw2you.realmeet.service.AllocationService;
 import br.com.sw2you.realmeet.util.ResponseEntityUtils;
-import java.util.Optional;
+import java.time.LocalDate;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.context.request.NativeWebRequest;
 
 @RestController
 public class AllocationController implements AllocationsApi { //RoomApi gerado pelo swagger
@@ -41,5 +43,12 @@ public class AllocationController implements AllocationsApi { //RoomApi gerado p
     public CompletableFuture<ResponseEntity<Void>> updateAllocation(Long id, UpdateAllocationDTO updateAllocationDTO) {
         return runAsync(() -> allocationService.updateAllocation(id, updateAllocationDTO), controllersExecutor)
                 .thenApply(ResponseEntityUtils::noContent);
+    }
+
+    @Override
+    public CompletableFuture<ResponseEntity<List<AllocationDTO>>> listAllocations(String employeeEmail, Long roomId, LocalDate startAt, LocalDate endAt) {
+        //return supplyAsync
+        return supplyAsync(() -> allocationService.listAllocations(employeeEmail, roomId, startAt, endAt), controllersExecutor)
+                .thenApply(ResponseEntityUtils::ok);
     }
 }
