@@ -131,6 +131,9 @@ paths:
           schema:
             type: string
             format: date
+        - $ref: '#/components/parameters/orderBy'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/page'
       responses:
         200:
           description: OK
@@ -292,10 +295,32 @@ components:
 
   responses:
     UnprocessableEntity:
-      description: O servidor entende o tipo de conteúdo da entidade de solicitacão, mas nao conseguiu processar as instruções contidas.
+      description: O servidor entende o tipo de conteúdo da entidade de solicitação, mas nao conseguiu processar as instruções contidas.
       content:
         application/json:
           schema:
             type: array
             items:
               $ref: '#/components/schemas/ResponseError'
+
+  parameters:
+    orderBy:
+      name: orderBy
+      in: query
+      description: Field to order by
+      schema:
+        type: string
+
+    limit:
+      name: limit
+      in: query
+      description: Maximum number of returned records
+      schema:
+        type: integer
+
+    page:
+      name: page
+      in: query
+      description: The page of records to fetch (0 index based)
+      schema:
+        type: integer

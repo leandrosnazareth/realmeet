@@ -1,13 +1,15 @@
 package integration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static utils.TestConstants.DEFAULT_ALLOCATION_SUBJECT;
+import static utils.TestConstants.*;
 import static utils.TestDataCreator.newAllocationBuilder;
+import static utils.TestDataCreator.newEmployeeBuilder;
 
 import br.com.sw2you.realmeet.api.facade.AllocationApi;
 import br.com.sw2you.realmeet.domain.repository.AllocationRepository;
 import br.com.sw2you.realmeet.domain.repository.RoomRepository;
 import br.com.sw2you.realmeet.service.AllocationService;
+import java.time.OffsetDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import core.BaseIntegrationTest;
 import org.junit.jupiter.api.Test;
@@ -26,10 +28,10 @@ class AllocationApiFilterIntegrationTest extends BaseIntegrationTest {
     @Autowired
     private AllocationService allocationService;
 
-//    @Override
-//    protected void setupEach() throws Exception {
-//        setLocalHostBasePath(api.getApiClient(), "/v1");
-//    }
+    @Override
+    protected void setupEach() throws Exception {
+        setLocalHostBasePath(allocationApi.getApiClient(), "/v1");
+    }
 
     @Test
     void testFilterAllAllocations() {
@@ -41,7 +43,14 @@ class AllocationApiFilterIntegrationTest extends BaseIntegrationTest {
         var allocation3 = allocationRepository.saveAndFlush(
                 newAllocationBuilder(room).subject(DEFAULT_ALLOCATION_SUBJECT + 3).build());
 
-        var allocationDTOList = allocationApi.listAllocations(null, null, null, null);
+        var allocationDTOList = allocationApi.listAllocations(
+                null,
+                null,
+                null, null,
+                null,
+                null,
+                null
+        );
 
         assertEquals(3, allocationDTOList.size());
         assertEquals(allocation1.getSubject(), allocationDTOList.get(0).getSubject());
@@ -49,90 +58,89 @@ class AllocationApiFilterIntegrationTest extends BaseIntegrationTest {
         assertEquals(allocation3.getSubject(), allocationDTOList.get(2).getSubject());
     }
 
-//    @Test
-//    void testFilterAllocationsByRoomId() {
-//        var roomA = roomRepository.saveAndFlush(TestDataCreator.newRoomBuilder().name(DEFAULT_ROOM_NAME + "A").build());
-//        var roomB = roomRepository.saveAndFlush(TestDataCreator.newRoomBuilder().name(DEFAULT_ROOM_NAME + "B").build());
-//
-//        var allocation1 = allocationRepository.saveAndFlush(newAllocationBuilder(roomA).build());
-//        var allocation2 = allocationRepository.saveAndFlush(newAllocationBuilder(roomA).build());
-//        allocationRepository.saveAndFlush(newAllocationBuilder(roomB).build());
-//
-//        var allocationDTOList = allocationApi.listAllocations(
-//                TEST_CLIENT_API_KEY,
-//                null,
-//                roomA.getId(),
-//                null,
-//                null,
-//                null,
-//                null,
-//                null
-//        );
-//
-//        assertEquals(2, allocationDTOList.size());
-//        assertEquals(allocation1.getId(), allocationDTOList.get(0).getId());
-//        assertEquals(allocation2.getId(), allocationDTOList.get(1).getId());
-//    }
-//
-//    @Test
-//    void testFilterAllocationsByEmployeeEmail() {
-//        var room = roomRepository.saveAndFlush(TestDataCreator.newRoomBuilder().build());
-//        var employee1 = newEmployeeBuilder().email(DEFAULT_EMPLOYEE_EMAIL + 1).build();
-//        var employee2 = newEmployeeBuilder().email(DEFAULT_EMPLOYEE_EMAIL + 2).build();
-//
-//        var allocation1 = allocationRepository.saveAndFlush(newAllocationBuilder(room).employee(employee1).build());
-//        var allocation2 = allocationRepository.saveAndFlush(newAllocationBuilder(room).employee(employee1).build());
-//        allocationRepository.saveAndFlush(newAllocationBuilder(room).employee(employee2).build());
-//
-//        var allocationDTOList = allocationApi.listAllocations(
-//                TEST_CLIENT_API_KEY,
-//                employee1.getEmail(),
-//                null,
-//                null,
-//                null,
-//                null,
-//                null,
-//                null
-//        );
-//
-//        assertEquals(2, allocationDTOList.size());
-//        assertEquals(allocation1.getId(), allocationDTOList.get(0).getId());
-//        assertEquals(allocation2.getId(), allocationDTOList.get(1).getId());
-//    }
-//
-//    @Test
-//    void testFilterAllocationsByDateRange() {
-//        var baseStartAt = now().plusDays(2).withHour(14).withMinute(0);
-//        var baseEndAt = now().plusDays(4).withHour(20).withMinute(0);
-//
-//        var room = roomRepository.saveAndFlush(TestDataCreator.newRoomBuilder().build());
-//
-//        var allocation1 = allocationRepository.saveAndFlush(
-//                newAllocationBuilder(room).startAt(baseStartAt.plusHours(1)).endAt(baseStartAt.plusHours(2)).build()
-//        );
-//        var allocation2 = allocationRepository.saveAndFlush(
-//                newAllocationBuilder(room).startAt(baseStartAt.plusHours(4)).endAt(baseStartAt.plusHours(5)).build()
-//        );
-//
-//        allocationRepository.saveAndFlush(
-//                newAllocationBuilder(room).startAt(baseEndAt.plusDays(1)).endAt(baseEndAt.plusDays(3).plusHours(1)).build()
-//        );
-//
-//        var allocationDTOList = allocationApi.listAllocations(
-//                TEST_CLIENT_API_KEY,
-//                null,
-//                null,
-//                baseStartAt.toLocalDate(),
-//                baseEndAt.toLocalDate(),
-//                null,
-//                null,
-//                null
-//        );
-//
-//        assertEquals(2, allocationDTOList.size());
-//        assertEquals(allocation1.getId(), allocationDTOList.get(0).getId());
-//        assertEquals(allocation2.getId(), allocationDTOList.get(1).getId());
-//    }
+    @Test
+    void testFilterAllocationsByRoomId() {
+        var roomA = roomRepository.saveAndFlush(TestDataCreator.newRoomBuilder().name(DEFAULT_ROOM_NAME + "A").build());
+        var roomB = roomRepository.saveAndFlush(TestDataCreator.newRoomBuilder().name(DEFAULT_ROOM_NAME + "B").build());
+
+        var allocation1 = allocationRepository.saveAndFlush(newAllocationBuilder(roomA).build());
+        var allocation2 = allocationRepository.saveAndFlush(newAllocationBuilder(roomA).build());
+        allocationRepository.saveAndFlush(newAllocationBuilder(roomB).build());
+
+        var allocationDTOList = allocationApi.listAllocations(
+                null,
+                roomA.getId(),
+                null,
+                null,
+                null,
+                null,
+                null
+        );
+
+        assertEquals(2, allocationDTOList.size());
+        assertEquals(allocation1.getId(), allocationDTOList.get(0).getId());
+        assertEquals(allocation2.getId(), allocationDTOList.get(1).getId());
+    }
+
+    @Test
+    void testFilterAllocationsByEmployeeEmail() {
+        var room = roomRepository.saveAndFlush(TestDataCreator.newRoomBuilder().build());
+        var employee1 = newEmployeeBuilder().email(DEFAULT_EMPLOYEE_EMAIL + 1).build();
+        var employee2 = newEmployeeBuilder().email(DEFAULT_EMPLOYEE_EMAIL + 2).build();
+
+        var allocation1 = allocationRepository.saveAndFlush(newAllocationBuilder(room).employee(employee1).build());
+        var allocation2 = allocationRepository.saveAndFlush(newAllocationBuilder(room).employee(employee1).build());
+        allocationRepository.saveAndFlush(newAllocationBuilder(room).employee(employee2).build());
+
+        var allocationDTOList = allocationApi.listAllocations(
+                employee1.getEmail(),
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+        );
+
+        assertEquals(2, allocationDTOList.size());
+        assertEquals(allocation1.getId(), allocationDTOList.get(0).getId());
+        assertEquals(allocation2.getId(), allocationDTOList.get(1).getId());
+    }
+
+    @Test
+    void testFilterAllocationsByDateRange() {
+        //14:00 daqui a 2dias
+        var baseStartAt = OffsetDateTime.now().plusDays(2).withHour(14).withMinute(0);
+        //20:00 daqui a 2 dias
+        var baseEndAt = OffsetDateTime.now().plusDays(4).withHour(20).withMinute(0);
+
+        var room = roomRepository.saveAndFlush(TestDataCreator.newRoomBuilder().build());
+
+        var allocation1 = allocationRepository.saveAndFlush(
+                newAllocationBuilder(room).startAt(baseStartAt.plusHours(1)).endAt(baseStartAt.plusHours(2)).build()
+        );
+        var allocation2 = allocationRepository.saveAndFlush(
+                newAllocationBuilder(room).startAt(baseStartAt.plusHours(4)).endAt(baseStartAt.plusHours(5)).build()
+        );
+
+        allocationRepository.saveAndFlush(
+                newAllocationBuilder(room).startAt(baseEndAt.plusDays(1)).endAt(baseEndAt.plusDays(3).plusHours(1)).build()
+        );
+
+        var allocationDTOList = allocationApi.listAllocations(
+                null,
+                null,
+                baseStartAt.toLocalDate(),
+                baseEndAt.toLocalDate(),
+                null,
+                null,
+                null
+        );
+
+        assertEquals(2, allocationDTOList.size());
+        assertEquals(allocation1.getId(), allocationDTOList.get(0).getId());
+        assertEquals(allocation2.getId(), allocationDTOList.get(1).getId());
+    }
 //
 //    @Test
 //    void testFilterAllocationUsingPagination() {

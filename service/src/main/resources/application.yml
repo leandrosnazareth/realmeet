@@ -30,8 +30,8 @@ logging:
 # =================================
 # = RealMeet
 # =================================
-#realmeet:
-#  taskExecutor:
-#    pool:
-#      coreSize: 20
-#        maxSize: 20
+realmeet:
+  taskExecutor:
+    pool:
+      coreSize: 50
+        maxSize: 50
