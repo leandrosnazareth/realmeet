@@ -18,6 +18,17 @@ spring:
     username: root
     password: root
     type: com.zaxxer.hikari.HikariDataSource # gerenciar conexoes em aberto
+  mail: #envio de e-mail
+    host: smtp.gmail.com
+    username: a@a.com
+    password: password
+    from: a@a.com
+    properties:
+      mail.transport.protocol: smtp
+      mail.smtp.port: 587
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
 
 # =================================
 # = Logging - INFO - TRACE - DEBUG - ERROR
