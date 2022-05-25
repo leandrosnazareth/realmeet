@@ -18,7 +18,7 @@ import org.mockito.Mock;
 import utils.TestUtils;
 
 public class SendEmailIntegrationTest extends BaseIntegrationTest {
-    private static final String EMAIL_ADDRESS = "tosin.carlos@gmail.com";
+    private static final String EMAIL_ADDRESS = "leandrosnazareth@gmail.com";
     private static final String SUBJECT = "subject";
     private static final String EMAIL_TEMPLATE = "template-test.html";
 
@@ -33,6 +33,7 @@ public class SendEmailIntegrationTest extends BaseIntegrationTest {
 
     @Test
     void testSendEmail() {
+        //simular envio de email
         when(javaMailSender.createMimeMessage()).thenReturn(mimeMessage);
 
         var emailInfo = EmailInfo
