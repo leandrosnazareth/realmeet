@@ -4,9 +4,9 @@ import java.io.InputStream;
 import java.util.Objects;
 
 public class Attachment {
-    private final InputStream inputStream;
+    private final InputStream inputStream;//stream de dados
     private final String contentType;
-    private final String fileName;
+    private final String fileName;//nome do arquivo
 
     private Attachment(Builder builder) {
         inputStream = builder.inputStream;
