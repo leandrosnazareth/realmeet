@@ -27,26 +27,26 @@ public class AllocationController implements AllocationsApi { //RoomApi gerado p
     }
 
     @Override
-    public CompletableFuture<ResponseEntity<AllocationDTO>> createAllocation(CreateAllocationDTO createAllocationDTO) {
+    public CompletableFuture<ResponseEntity<AllocationDTO>> createAllocation(String apiKey, CreateAllocationDTO createAllocationDTO) {
         //return supplyAsync
         return supplyAsync(() -> allocationService.createAllocation(createAllocationDTO), controllersExecutor)
                 .thenApply(ResponseEntityUtils::created);
     }
 
     @Override
-    public CompletableFuture<ResponseEntity<Void>> deleteAllocation(Long id) {
+    public CompletableFuture<ResponseEntity<Void>> deleteAllocation(String apiKey, Long id) {
         return runAsync(() -> allocationService.deleteAllocation(id), controllersExecutor)
                 .thenApply(ResponseEntityUtils::noContent);
     }
 
     @Override
-    public CompletableFuture<ResponseEntity<Void>> updateAllocation(Long id, UpdateAllocationDTO updateAllocationDTO) {
+    public CompletableFuture<ResponseEntity<Void>> updateAllocation(String apiKey, Long id, UpdateAllocationDTO updateAllocationDTO) {
         return runAsync(() -> allocationService.updateAllocation(id, updateAllocationDTO), controllersExecutor)
                 .thenApply(ResponseEntityUtils::noContent);
     }
 
     @Override
-    public CompletableFuture<ResponseEntity<List<AllocationDTO>>> listAllocations(String employeeEmail, Long roomId, LocalDate startAt, LocalDate endAt, String orderBy, Integer limit, Integer page) {
+    public CompletableFuture<ResponseEntity<List<AllocationDTO>>> listAllocations(String apiKey, String employeeEmail, Long roomId, LocalDate startAt, LocalDate endAt, String orderBy, Integer limit, Integer page) {
         //return supplyAsync
         return supplyAsync(() -> allocationService.listAllocations(employeeEmail, roomId, startAt, endAt, orderBy, limit, page), controllersExecutor)
                 .thenApply(ResponseEntityUtils::ok);

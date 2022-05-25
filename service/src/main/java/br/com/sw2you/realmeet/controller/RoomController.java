@@ -25,25 +25,25 @@ public class RoomController implements RoomsApi { //RoomApi gerado pelo swagger
     }
 
     @Override
-    public CompletableFuture<ResponseEntity<RoomDTO>> getRoom(Long id) {
+    public CompletableFuture<ResponseEntity<RoomDTO>> getRoom(String apiKey, Long id) {
         //return supplyAsync
         return supplyAsync(() -> roomService.getRoom(id), controllersExecutor).thenApply(ResponseEntityUtils::ok);
     }
 
     @Override
-    public CompletableFuture<ResponseEntity<RoomDTO>> createRoom(CreateRoomDTO createRoomDTO) {
+    public CompletableFuture<ResponseEntity<RoomDTO>> createRoom(String apiKey, CreateRoomDTO createRoomDTO) {
         //return supplyAsync
         return supplyAsync(() -> roomService.createRoom(createRoomDTO), controllersExecutor).thenApply(ResponseEntityUtils::created);
     }
 
     @Override
-    public CompletableFuture<ResponseEntity<Void>> deleteRoom(Long id) {
+    public CompletableFuture<ResponseEntity<Void>> deleteRoom(String apiKey, Long id) {
         //runAsync não retorna nada
         return runAsync(() -> roomService.deleteRoom(id), controllersExecutor).thenApply(ResponseEntityUtils::noContent);//noContent foi deletado
     }
 
     @Override
-    public CompletableFuture<ResponseEntity<Void>> updateRoom(Long id, UpdateRoomDTO updateRoomDTO) {
+    public CompletableFuture<ResponseEntity<Void>> updateRoom(String apiKey, Long id, UpdateRoomDTO updateRoomDTO) {
         //runAsync não retorna nada
         return runAsync(() -> roomService.updateRoom(id, updateRoomDTO), controllersExecutor).thenApply(ResponseEntityUtils::noContent);
     }
