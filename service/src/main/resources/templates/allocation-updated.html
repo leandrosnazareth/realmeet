@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h2>O agendamento de sala foi atualizado com sucesso!</h2>
+<h3>Funcionário Responsável</h3>
+<ul>
+    <li><b>Nome:</b> <span th:text="${allocation.employee.name}"></span></li>
+    <li><b>E-mail:</b> <span th:text="${allocation.employee.email}"></span></li>
+</ul>
+<h3>Dados do Agendamento</h3>
+<ul>
+    <li><b>Sala:</b> <span th:text="${allocation.room.name}"></span></li>
+    <li><b>Lugares disponíveis:</b> <span th:text="${allocation.room.seats}"></span></li>
+    <li><b>Tema:</b> <span th:text="${allocation.subject}"></span></li>
+    <li><b>Data de início:</b> <span th:text="${#temporals.format(allocation.startAt, 'dd-MM-yyyy HH:mm')}"></span></li>
+    <li><b>Data de fim:</b> <span th:text="${#temporals.format(allocation.endAt, 'dd-MM-yyyy HH:mm')}"></span></li>
+</ul>
+</body>
+</html>

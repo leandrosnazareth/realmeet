@@ -44,3 +44,20 @@ logging:
 realmeet:
   allocations:
     maxFilterLimit: 50
+  email:
+    templates:
+      allocationCreated:
+        subject: Novo agendamento de sala criado
+        templateName: allocation-created.html
+      allocationUpdated:
+        subject: Agendamento de sala alterado
+        templateName: allocation-updated.html
+      allocationDeleted:
+        subject: Agendamento de sala excluído
+        templateName: allocation-deleted.html
+      allocationReport:
+        subject: Relatório de agendamento de sala
+        templateName: allocation-report.html
+  reports:
+    allocationReport:
+      maxMonthsInterval: 24

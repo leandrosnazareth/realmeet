@@ -32,6 +32,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class AllocationService {
     private final RoomRepository roomRepository;
     private final AllocationRepository allocationRepository;
+    private final NotificationService notificationService;
     private final AllocationValidator allocationValidator;
     private final AllocationMapper allocationMapper;
     private final int maxLimit;
@@ -40,12 +41,14 @@ public class AllocationService {
     public AllocationService(
             RoomRepository roomRepository,
             AllocationRepository allocationRepository,
+            NotificationService notificationService,
             AllocationValidator allocationValidator,
             AllocationMapper allocationMapper,
             @Value(ALLOCATIONS_MAX_FILTER_LIMIT) int maxLimit
     ) {
         this.roomRepository = roomRepository;
         this.allocationRepository = allocationRepository;
+        this.notificationService = notificationService;
         this.allocationValidator = allocationValidator;
         this.allocationMapper = allocationMapper;
         this.maxLimit = maxLimit;
@@ -57,6 +60,7 @@ public class AllocationService {
 
         var allocation = allocationMapper.fromCreateAllocationDTOToEntity(createAllocationDTO, room);
         allocationRepository.save(allocation);
+        notificationService.notifyAllocationCreated(allocation);
         return allocationMapper.fromEntityToAllocationDTO(allocation);
     }
 
@@ -73,6 +77,7 @@ public class AllocationService {
             throw new AllocationCannotBeDeletedException();
         }
         allocationRepository.delete(allocation);
+        notificationService.notifyAllocationCreated(allocation);
     }
 
 
@@ -92,7 +97,7 @@ public class AllocationService {
                 updateAllocationDTO.getStartAt(),
                 updateAllocationDTO.getEndAt()
         );
-//        notificationService.notifyAllocationUpdated(getAllocationOrThrow(allocationId));
+        notificationService.notifyAllocationUpdated(getAllocationOrThrow(allocationId));
     }
 
     private boolean isAllocationInThePast(Allocation allocation) {
