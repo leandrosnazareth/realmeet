@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="allocation-report" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0784c28a-c1d8-4d11-aeb3-d63c66988a31">
+    <property name="com.jaspersoft.studio.report.description" value=""/>
+    <parameter name="DateFromFilter" class="java.lang.String"/>
+    <parameter name="DateToFilter" class="java.lang.String"/>
+    <field name="DateFrom" class="java.lang.String"/>
+    <field name="DateTo" class="java.lang.String"/>
+    <field name="RoomName" class="java.lang.String"/>
+    <field name="EmployeeName" class="java.lang.String"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="42" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="6" width="555" height="30" uuid="c282ecdd-9c92-4c01-a7a4-6d404345a795"/>
+                <textElement textAlignment="Center">
+                    <font size="20" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Relatório de Agendamento de Salas]]></text>
+            </staticText>
+        </band>
+    </title>
+    <columnHeader>
+        <band height="88" splitType="Stretch">
+            <textField>
+                <reportElement x="50" y="10" width="70" height="20" uuid="d16155a0-3bba-4def-9340-b0a99ec0322a"/>
+                <textFieldExpression><![CDATA[$P{DateFromFilter}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="0" y="10" width="50" height="20" uuid="67bba8bf-bf31-4a59-9fa6-ec216b63f693"/>
+                <textElement>
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[Período:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="130" y="10" width="60" height="20" uuid="3375be81-45ff-4795-a55e-05cbd281c2ca"/>
+                <textFieldExpression><![CDATA[$P{DateToFilter}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="25" y="63" width="40" height="20" uuid="35cdb09c-109f-472c-aedf-a601ccde7680"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="11" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Início]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="135" y="63" width="40" height="20" uuid="110bced1-9935-4eb7-8f11-2bdb52f1399e"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="11" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Fim]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="260" y="63" width="40" height="20" uuid="89957b7d-5dca-428a-9f0d-3dc08aadaadd"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="11" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Sala]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="390" y="63" width="90" height="20" uuid="4b71fda7-1fdf-4789-a6b0-6956c1c16dc4"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="11" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Reponsável]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="20" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="90" height="15" uuid="366558e0-61f1-4463-8a9f-68cb12e92b76"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{DateFrom}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="105" y="0" width="100" height="15" uuid="763da9f8-fcb3-46d9-a5b6-06a2b99f8182"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{DateTo}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="230" y="0" width="100" height="15" uuid="f4093293-f8ce-457b-b53e-fe60ddaf2a3f"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{RoomName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="385" y="0" width="100" height="15" uuid="7ea70128-910a-4dbe-b2d8-5b072f4f4e59"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{EmployeeName}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>

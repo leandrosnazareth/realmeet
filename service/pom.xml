@@ -21,6 +21,7 @@
         <mockito-junit-jupiter.version>3.7.7</mockito-junit-jupiter.version>
         <prettier-maven-plugin.version>0.10</prettier-maven-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jasperreports.version>6.18.1</jasperreports.version>
     </properties>
 
     <dependencies>
@@ -75,6 +76,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!-- JasperReports -->
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>${jasperreports.version}</version>
         </dependency>
 
         <!-- Test -->
